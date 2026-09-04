@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An exceptionally crafted Holy Grail layout utilizing named grid template areas, explicit column gaps, smooth hover transitions, and a JavaScript theme controller.">
+    <title>Timothy Ebil - WDD 131 Perfected Layout</title>
+    <link rel="stylesheet" href="styles/layout.css">
+</head>
+<body>
+
+    <!-- Sticky Header Block with Flexbox Navigation and Interactive Theme Toggle -->
+    <header class="site-header">
+        <div class="header-branding">
+            <h1>Header Content</h1>
+            <button id="theme-button" class="theme-toggle-btn" aria-label="Toggle visual color theme">
+                Theme Toggle
+            </button>
+        </div>
+        <nav class="main-nav" aria-label="Primary Navigation">
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Secondary Navigational Aside Component -->
+    <aside class="left-sidebar" aria-label="Secondary Directory Links">
+        <div class="interactive-card">
+            <h2>Left Sidebar</h2>
+            <p>Hover over this container element card to observe hardware-accelerated dimensional scaling transformations.</p>
+        </div>
+    </aside>
+
+    <!-- Fluid Central Core Main Content Workspace -->
+    <main class="main-content">
+        <article class="interactive-card">
+            <h2>Main Content Area</h2>
+            <p>This layout aligns explicitly with the Google WebDev Holy Grail framework specifications. Grid properties maintain separation between structural text sequences and layout rendering rules.</p>
+            
+            <!-- Highly Optimized Media Element with Explicit Intrinsic Workspaces -->
+            <figure class="media-container">
+                <img src="https://picsum.photos" 
+                     alt="A sleek corporate office window looking out over a morning cityscape" 
+                     width="800" 
+                     height="450" 
+                     loading="lazy" 
+                     class="fluid-img">
+                <figcaption>Lighthouse performance targets favor explicit asset width and height footprints to preserve space prior to compilation.</figcaption>
+            </figure>
+            
+            <p>The layout engine leverages native grid gap properties to generate whitespace boundaries cleanly without introducing margin or padding collisions.</p>
+        </article>
+    </main>
+
+    <!-- Contextual Complementary Aside Component -->
+    <aside class="right-sidebar" aria-label="Complementary Feed Sidebar">
+        <div class="interactive-card">
+            <h2>Right Sidebar</h2>
+            <p>Clicking the toggle control element executes a clean class mutation across the document object model hierarchy.</p>
+        </div>
+    </aside>
+
+    <!-- Persistent Structural Footer Block -->
+    <footer class="site-footer">
+        <p>&copy; 2026 | Timothy Ebil | WDD 131 Advanced Production Architecture</p>
+    </footer>
+
+    <!-- Inline Vanilla JavaScript Micro-Engine Script -->
+    <script>
+        const themeBtn = document.getElementById('theme-button');
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+        });
+    </script>
+</body>
+</html>
