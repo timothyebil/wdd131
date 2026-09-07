@@ -1,0 +1,208 @@
+/* ==========================================================================
+   1. Centralized Design Tokens (Base Light Theme Values)
+   ========================================================================== */
+:root {
+    --bg-body: #ffffff;
+    --bg-header-footer: #2b2b2b;
+    --bg-nav: #000000;
+    --bg-main: #cccccc;
+    --bg-aside: #ffffff;
+    
+    --text-dark: #111111;
+    --text-light: #ffffff;
+    --btn-toggle-bg: #4b5563;
+    --btn-toggle-hover: #1f2937;
+    --nav-accent: #38bdf8;
+    
+    --font-serif: Georgia, 'Times New Roman', Times, serif;
+    --timing-transform: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ==========================================================================
+   2. Manual Document Data-Theme Override Variables (Dark Theme Mode)
+   ========================================================================== */
+html[data-theme="dark"] {
+    --bg-body: #0f172a;
+    --bg-header-footer: #020617;
+    --bg-nav: #09090b;
+    --bg-main: #334155;
+    --bg-aside: #1e293b;
+    
+    --text-dark: #f8fafc;
+    --text-light: #cbd5e1;
+    --btn-toggle-bg: #0284c7;
+    --btn-toggle-hover: #38bdf8;
+}
+
+/* ==========================================================================
+   3. Global Layout Foundation Resets
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    font-family: var(--font-serif);
+    color: var(--text-dark);
+    background-color: var(--bg-body);
+    min-height: 100vh;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+}
+
+.site-header { grid-area: header; }
+.main-content { grid-area: main; }
+.aside-content { grid-area: aside; }
+.site-footer { grid-area: footer; }
+
+/* ==========================================================================
+   4. High-Performance Header & JavaScript Theme Toggle Styling
+   ========================================================================== */
+.site-header {
+    background-color: var(--bg-header-footer);
+    color: var(--text-light);
+}
+
+.header-branding-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.theme-toggle-btn {
+    background-color: var(--btn-toggle-bg);
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--timing-transform);
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--btn-toggle-hover);
+    transform: scale(1.03);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    background-color: var(--bg-nav);
+    width: 100%;
+}
+
+.nav-links li {
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+}
+
+.nav-links a {
+    display: block;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 1.25rem 0.5rem;
+    font-size: 1rem;
+    position: relative;
+    will-change: transform, color;
+    transition: var(--timing-transform);
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--nav-accent);
+    transform: translateY(-2px) scale(1.05);
+    outline: none;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: var(--nav-accent);
+    transition: var(--timing-transform);
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    width: 60%;
+}
+
+/* ==========================================================================
+   5. Content Quadrants Architecture (Mobile Scaling Layout Defaults)
+   ========================================================================== */
+.main-content {
+    background-color: var(--bg-main);
+    padding: 2.5rem 2rem;
+    min-height: 300px;
+}
+
+.aside-content {
+    background-color: var(--bg-aside);
+    padding: 2.5rem 2rem;
+    min-height: 150px;
+}
+
+.main-content h2, 
+.aside-content h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+/* ==========================================================================
+   6. Persistent Structural Footer Component
+   ========================================================================== */
+.site-footer {
+    background-color: var(--bg-header-footer);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-size: 1.25rem;
+}
+
+/* ==========================================================================
+   7. Desktop Breakpoint Adjustment (Matches Layout Screenshot Perfectly)
+   ========================================================================== */
+@media (min-width: 768px) {
+    body {
+        /* Snaps the layout into side-by-side columns on screen sizes above 768px wide */
+        grid-template-columns: 7.2fr 2.8fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header    header"
+            "main      aside"
+            "footer    footer";
+    }
+
+    .main-content {
+        min-height: 450px; /* Provides depth balance matching assignment guidelines */
+    }
+
+    .nav-links li {
+        min-width: auto; /* Expands elements inline on wider screens */
+    }
+}

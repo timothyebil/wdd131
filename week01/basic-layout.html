@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timothy Ebil's WDD 131 responsive layout featuring a vanilla JavaScript manual light/dark theme switch engine.">
+    <title>Timothy Ebil - WDD 131 Layout & Theme Engine</title>
+    <link rel="stylesheet" href="styles/layout.css">
+</head>
+<body>
+
+    <!-- Header Block featuring layout title, manual toggle switch, and Flex navigation menu -->
+    <header class="site-header">
+        <div class="header-branding-container">
+            <div class="header-title">Header Content</div>
+            <button id="theme-switcher" class="theme-toggle-btn" aria-label="Toggle theme color preference mode manually">
+                Toggle Theme
+            </button>
+        </div>
+        <nav class="main-nav" aria-label="Primary Navigation">
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Workspace Content Section -->
+    <main class="main-content">
+        <h2>Main Content</h2>
+    </main>
+
+    <!-- Aside Content Sidebar Section -->
+    <aside class="aside-content" aria-label="Complementary Sidebar Information">
+        <h2>Aside Content</h2>
+    </aside>
+
+    <!-- Persistent Structural Footer Area -->
+    <footer class="site-footer">
+        <p>Footer Content &copy; 2026 | Timothy Ebil</p>
+    </footer>
+
+    <!-- Inline Lightweight JavaScript Theme Controller Micro-Engine -->
+    <script>
+        const themeButton = document.getElementById('theme-switcher');
+        
+        // Listen for user click interactions on the toggle element
+        themeButton.addEventListener('click', () => {
+            // Read current data-theme state or fallback to default light state
+            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+            const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            // Set the new theme globally on the document root element
+            document.documentElement.setAttribute('data-theme', targetTheme);
+        });
+    </script>
+</body>
+</html>
