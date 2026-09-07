@@ -1,0 +1,221 @@
+@import url('https://googleapis.com');
+
+/* Basic Structural Definitions */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #1a202c; /* High contrast dark gray */
+}
+
+/* Header Component */
+header {
+    background-color: #1c3d5a;
+    color: #ffffff;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    font-size: 1.4rem;
+    padding: 1.2rem 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Flexbox Navigation Menu */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2d3748;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: #edf2f7;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    flex-grow: 1;
+    text-align: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+    background-color: #1a202c;
+    color: #ffffff;
+}
+
+/* Horizontal Main Columns via CSS Grid */
+main {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #2d3748;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1.6fr 1fr;
+    }
+}
+
+/* Rounded Cards */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+    background-color: #1f507e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0.75rem;
+    font-size: 1.15rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+/* About Layout Components */
+.bio-section {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 480px) {
+    .bio-section {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.bio-section p {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.profile-img {
+    border: 1px solid #cbd5e0;
+    display: block;
+    margin: 0 auto;
+}
+
+.card h3 {
+    text-align: center;
+    color: #2d3748;
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #cbd5e0;
+    margin-bottom: 1.5rem;
+    width: 90%;
+}
+
+/* Country Flag Layout */
+.country-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media (min-width: 480px) {
+    .country-section {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.flag-container {
+    text-align: center;
+    min-width: 140px;
+}
+
+.flag-img {
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.flag-caption {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #4a5568;
+    margin: 0.25rem 0 0 0;
+}
+
+.country-text {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Resource Anchor Lists */
+.resources-list {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin: 0;
+}
+
+.resources-list li {
+    margin-bottom: 0.6rem;
+}
+
+.resources-list a {
+    color: #2b6cb0;
+    text-decoration: underline;
+    font-size: 0.95rem;
+}
+
+.resources-list a:hover {
+    color: #1a436d;
+}
+
+/* Footer Section styling */
+footer {
+    background-color: #1a365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.4rem 0;
+}
+
+#lastModified {
+    color: #e2f845; /* Lime green color for visibility against blue background */
+    font-size: 0.85rem;
+    font-weight: 700;
+}
