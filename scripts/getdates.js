@@ -4,7 +4,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Target and populate current calendar year
+    // 1. Target and write the current system year
     const yearDisplayElement = document.getElementById("currentyear");
     if (yearDisplayElement) {
         yearDisplayElement.textContent = new Date().getFullYear();
