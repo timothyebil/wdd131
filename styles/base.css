@@ -1,20 +1,18 @@
-/* Standardized Variable Architecture Configuration */
+/* Standardized Global CSS Properties Palette Configuration */
 :root {
-    --primary-bg: #1c3d5a;
-    --secondary-bg: #2d3748;
+    --primary-blue: #1c3d5a;
+    --secondary-dark: #2d3748;
     --accent-blue: #1f507e;
-    --hover-dark: #1a202c;
-    --text-main: #333333;
+    --hover-black: #1a202c;
+    --text-charcoal: #333333;
     --text-muted: #4a5568;
-    --card-bg: #ffffff;
-    --body-bg: #f8fafc;
-    --border-ui: #cbd5e0;
-    --divider-color: #cbd5e0;
-    --shadow-tint: rgba(0, 0, 0, 0.05);
-    --flag-shadow: rgba(0, 0, 0, 0.10);
+    --ui-white: #ffffff;
+    --ui-silver: #f8fafc;
+    --border-gray: #cbd5e0;
+    --alpha-border: rgba(0, 0, 0, 0.20); /* Standardized validation fix for earlier error */
 }
 
-/* Global Elements Master Reset */
+/* Master Layout Resets */
 * {
     margin: 0;
     padding: 0;
@@ -23,14 +21,14 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--body-bg);
-    color: var(--text-main);
+    background-color: var(--ui-silver);
+    color: var(--text-charcoal);
     line-height: 1.6;
 }
 
 header {
-    background-color: var(--primary-bg);
-    color: var(--card-bg);
+    background-color: var(--primary-blue);
+    color: var(--ui-white);
     text-align: center;
 }
 
@@ -47,11 +45,11 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: var(--secondary-bg);
+    background-color: var(--secondary-dark);
 }
 
 nav a {
-    color: var(--body-bg);
+    color: var(--ui-silver);
     text-decoration: none;
     padding: 1rem 2rem;
     flex-grow: 1;
@@ -61,11 +59,11 @@ nav a {
 }
 
 nav a:hover {
-    background-color: var(--hover-dark);
-    color: var(--card-bg);
+    background-color: var(--hover-black);
+    color: var(--ui-white);
 }
 
-/* Core Layout Positioning Framework */
+/* Main Content Structural Core Alignment */
 main {
     max-width: 1024px;
     margin: 0 auto;
@@ -75,12 +73,13 @@ main {
 h1 {
     text-align: center;
     font-size: 2.5rem;
-    color: var(--secondary-bg);
+    color: var(--secondary-dark);
     margin-bottom: 2rem;
     border-bottom: 3px solid var(--accent-blue);
     padding-bottom: 0.5rem;
 }
 
+/* CSS Grid Columns Architecture Layout */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -88,26 +87,25 @@ h1 {
     align-items: start;
 }
 
-/* Desktop Fluid Breakpoint Adjustments */
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 2fr 1fr;
     }
 }
 
-/* Interface Component Cards Layout */
+/* Interface Component Card Layout Rules */
 .card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-ui);
+    background-color: var(--ui-white);
+    border: 1px solid var(--border-gray);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px -1px var(--shadow-tint);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     margin-bottom: 1.5rem;
 }
 
 .card h2 {
     background-color: var(--accent-blue);
-    color: var(--card-bg);
+    color: var(--ui-white);
     padding: 1rem;
     font-size: 1.3rem;
     text-align: center;
@@ -116,7 +114,7 @@ h1 {
 
 .card h3 {
     text-align: center;
-    color: var(--secondary-bg);
+    color: var(--secondary-dark);
     margin: 1.5rem 0 0.5rem;
 }
 
@@ -127,7 +125,7 @@ h1 {
 
 .card li {
     margin-bottom: 0.8rem;
-    border-bottom: 1px dashed var(--border-ui);
+    border-bottom: 1px dashed var(--border-gray);
     padding-bottom: 0.5rem;
 }
 
@@ -143,10 +141,10 @@ h1 {
 
 .card li a:hover {
     text-decoration: underline;
-    color: var(--primary-bg);
+    color: var(--primary-blue);
 }
 
-/* Flexible Internal Layout Block Configurations */
+/* Flexbox Sub-Box Box Formations */
 .profile-box, .country-box {
     display: flex;
     flex-direction: column;
@@ -163,7 +161,7 @@ h1 {
 
 .profile-img {
     border-radius: 4px;
-    border: 1px solid var(--border-ui);
+    border: 1px solid var(--border-gray);
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -175,8 +173,8 @@ h1 {
 }
 
 .flag-img {
-    border: 1px solid var(--border-ui);
-    box-shadow: 0 2px 4px var(--flag-shadow);
+    border: 1px solid var(--border-gray);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .caption {
@@ -188,15 +186,15 @@ h1 {
 
 .card-divider {
     border: 0;
-    border-top: 1px solid var(--divider-color);
+    border-top: 1px solid var(--alpha-border);
     width: 90%;
     margin: 0 auto;
 }
 
-/* Footer Section Presentation Standardizations */
+/* Footer UI Formatting System */
 footer {
-    background-color: var(--primary-bg);
-    color: var(--card-bg);
+    background-color: var(--primary-blue);
+    color: var(--ui-white);
     text-align: center;
     padding: 1.5rem 1rem;
     margin-top: 4rem;
@@ -208,7 +206,7 @@ footer p {
 }
 
 #lastModified {
-    color: #e2f845; /* Explicit visibility text highlighting for dynamic date validation tool passes */
+    color: #e2f845; /* High-visibility yellow for dynamic automated date verification checks */
     font-size: 0.85rem;
     font-weight: 700;
 }
