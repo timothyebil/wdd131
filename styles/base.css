@@ -1,194 +1,418 @@
-/* Core Styling & Premium Slate Typography Layout */
+/* Color Palette Custom Contrast Variable Architecture */
+:root {
+  --bg-dark-blue: #1c496d;      /* Navigation & Card Headers Background */
+  --bg-footer: #163c5a;         /* Darker Blue for Footer Background */
+  --bg-body: #f4f4f4;           /* Canvas Surface */
+  --bg-white: #ffffff;          /* Card Interior Background */
+  --text-main: #333333;         /* Body Copy Text */
+  --text-light: #ffffff;        /* Primary Light Text */
+  --border-card: #b0c4de;       /* Outer Muted Outline Border for Cards */
+  --border-divider: #cccccc;    /* HR Divider Line Color */
+  --text-caption: #555555;      /* Dark Charcoal Gray for Accessible Captions */
+  --text-js-yellow: #e4e731;    /* Bright Yellow Accent for JS Footer Information */
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
 body {
-    font-family: 'Open Sans', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f6f8;
-    color: #2c3e50;
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
-h1, h2, h3 {
-    font-family: 'Roboto', Helvetica, sans-serif;
-    color: #1a252f;
-    font-weight: 700;
-}
-
-/* Header & Executive Navigation Architecture */
 header {
-    background-color: #1a252f;
-    color: #ffffff;
-    padding: 1.5rem;
-    text-align: center;
+  background-color: var(--bg-dark-blue);
+  color: var(--text-light);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  animation: slideDown 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
 
-/* Assignment Rule: Course title set as block display for crisp element flow */
 #course-title {
-    display: block;
-    font-weight: 700;
-    font-size: 1.5rem;
-    letter-spacing: 0.5px;
-    margin-bottom: 1rem;
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-/* Assignment Rule: Navigation layout explicitly set to use CSS Flex */
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 1.8rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+#nav-links {
+  display: flex;
+  width: 100%;
 }
 
 nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    padding-bottom: 4px;
-    border-bottom-width: 2px;
-    border-bottom-style: solid;
-    border-bottom-color: transparent;
-    transition: color 0.2s ease, border-color 0.2s ease;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 400;
+  flex: 1;
+  text-align: center;
+  padding: 0.4rem 0;
+  position: relative;
+  transition: var(--transition-smooth);
 }
 
-/* Assignment Rule: Responsive hover layout animations without layout shifts */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--text-js-yellow);
+  transition: var(--transition-smooth);
+  transform: translateX(-50%);
+}
+
 nav a:hover {
-    color: #3498db; 
-    border-bottom-color: #3498db; 
+  color: var(--text-js-yellow);
+  text-shadow: 0 0 8px rgba(228, 231, 49, 0.4);
 }
 
-/* Assignment Rule: Main centered vertically and max width constrained */
+nav a:hover::after {
+  width: 60%;
+}
+
+nav a:focus-visible,
+#menu-toggle:focus-visible,
+.card li a:focus-visible {
+  outline: 3px dashed var(--text-js-yellow);
+  outline-offset: 4px;
+}
+
+#menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+#menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--text-light);
+  border-radius: 10px;
+  transition: var(--transition-smooth);
+}
+
 main {
-    max-width: 1000px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 3rem;
-    border-bottom-width: 4px;
-    border-bottom-style: solid;
-    border-bottom-color: #1a252f;
-    padding-bottom: 0.8rem;
-    font-size: 2.5rem;
+.student-name {
+  text-align: center;
+  color: #222222;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 1.5rem 0;
+  opacity: 0;
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s forwards;
 }
 
-/* Assignment Rule: Core card layout built via CSS Grid columns */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem; 
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
 }
 
-/* Premium Card Architecture (Repetition & Usability Principles) */
 .card {
-    background-color: #ffffff;
-    padding: 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px #e1e4e6;
-    border-top-width: 6px;
-    border-top-style: solid;
-    border-top-color: #1a252f;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-card);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: var(--transition-smooth);
+  opacity: 0;
 }
 
-.card h2 {
-    margin-top: 0;
-    font-size: 1.6rem;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #e1e4e6;
-    padding-bottom: 0.6rem;
+.grid-container .card:nth-child(1) {
+  animation: slideInLeft 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s forwards;
 }
 
-.profile-box, .country-box {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    text-align: left;
+.grid-container .card:nth-child(2) {
+  animation: slideInRight 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s forwards;
 }
 
-.profile-box p, .country-box p {
-    line-height: 1.7;
-    font-size: 0.95rem;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
-.profile-img, .flag-img {
-    border-radius: 6px;
-    box-shadow: 0 4px 12px #d1d5db;
-    transition: transform 0.3s ease;
+.card-header {
+  background-color: var(--bg-dark-blue);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0.6rem 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
 }
 
-.profile-img:hover, .flag-img:hover {
-    transform: scale(1.02);
+.card-content {
+  padding: 1.5rem;
+}
+
+.profile-row, .country-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.profile-text, .country-text {
+  margin: 0;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.profile-img {
+  border: 1px solid var(--border-card);
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.location-heading {
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 1.5rem 0 0.5rem 0;
+  color: #111111;
+}
+
+.card-divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--border-divider);
+  margin: 0.5rem auto 1.5rem auto;
+  width: 90%;
 }
 
 .flag-wrapper {
-    text-align: center;
+  text-align: center;
+  min-width: 140px;
+}
+
+.flag-img {
+  border: 1px solid var(--border-divider);
 }
 
 .caption {
-    font-size: 0.85rem;
-    color: #7f8c8d;
-    margin-top: 8px;
-    font-style: italic;
+  font-size: 0.8rem;
+  color: var(--text-caption);
+  font-style: italic;
+  margin: 0.4rem 0 0 0;
+  line-height: 1.2;
 }
 
-/* Cleaned separator properties for complete W3C Jigsaw compliance */
-.card-divider {
-    border-top-style: none;
-    border-right-style: none;
-    border-bottom-style: none;
-    border-left-style: none;
-    height: 1px;
-    background-color: #e1e4e6;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 0;
-    margin-right: 0;
+.resources-box {
+  padding: 2.5rem 2rem;
 }
 
-/* Bullet-Free Resource List Configurations */
 .card ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  margin: 0;
+  padding-left: 1.25rem;
 }
 
 .card li {
-    margin-bottom: 1.2rem;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #f4f6f8;
-    padding-bottom: 0.6rem;
+  margin-bottom: 0.6rem;
 }
 
 .card li a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.05rem;
-    transition: color 0.2s ease;
+  color: #1b496d; 
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.card li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #0b2336;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
 }
 
 .card li a:hover {
-    color: #1a252f;
-    text-decoration: underline;
+  color: #0b2336;
+  transform: translateX(3px); 
 }
 
-/* High-Contrast Footer Configuration */
+.card li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 footer {
-    background-color: #1a252f;
-    color: #ffffff;
-    text-align: center;
-    padding: 2.5rem;
-    margin-top: 6rem;
-    line-height: 1.8;
-    font-size: 0.95rem;
+  background-color: var(--bg-footer);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.2rem 1rem;
+  margin-top: 4rem;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.6s forwards;
 }
 
 footer p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+#lastModified {
+  color: var(--text-js-yellow);
+  font-size: 0.85rem;
+}
+
+/* STAGE ANIMATION KEYFRAMES RULES */
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* RESPONSIVE BREAKPOINT CONTROLS */
+@media (max-width: 820px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .card:hover {
+    transform: none; 
+  }
+
+  .grid-container .card:nth-child(1),
+  .grid-container .card:nth-child(2) {
+    animation: fadeInUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s forwards;
+  }
+}
+
+@media (max-width: 580px) {
+  header {
+    padding: 1rem;
+    position: relative;
+  }
+
+  nav {
+    justify-content: flex-end;
+    padding-right: 1.5rem;
+  }
+  
+  #menu-toggle {
+    display: flex;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-dark-blue);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: var(--transition-smooth);
+  }
+
+  #nav-links.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  nav a {
+    padding: 1rem 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  nav a::after {
+    display: none; 
+  }
+
+  #menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  #menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .profile-row, .country-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-img, .flag-wrapper {
     margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: 0;
-    margin-right: 0;
+  }
 }

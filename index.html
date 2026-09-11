@@ -4,76 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 – Dynamic Web Fundamentals – Timothy Ebil</title>
-    
-    <!-- Enforced Course Description: Contains course code, student name, and keyword summaries -->
-    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals course landing page for Timothy Ebil, featuring local profiles, responsive CSS grid layouts, and web programming resource archives.">
+    <meta name="description" content="WDD 131 dynamic web landing page for Timothy Ebil, featuring Uganda profiles, responsive grid layout blocks, and persistent browser navigation configurations.">
     <meta name="author" content="Timothy Ebil">
-    
-    <!-- Enforced Course-Compliant Google Fonts API Tag Array (Corrected Fonts Domains) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700,800%7CRoboto:100,300,400,500,700,900" rel="stylesheet">
-    
-    <!-- Local Stylesheet Reference -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/base.css">
-    
-    <!-- Defer-Loaded Script File for Dynamic Footers -->
     <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
-        <!-- Assignment Rule: Title updated exactly to course parameter string with id tag -->
-        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
         <nav>
-            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">I-Learn</a>
-            <!-- Assignment Rule: Explicit favorite scripture reference mapping target -->
-            <a href="https://churchofjesuschrist.org" target="_blank" rel="noopener">Scripture</a>
-            <a href="final-project/index.html">Final Project</a>
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div id="nav-links">
+                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://instructure.com" target="_blank" rel="noopener">I-Learn</a>
+                <a href="https://churchofjesuschrist.org" target="_blank" rel="noopener">Scripture</a>
+                <a href="final-project/index.html">Final Project</a>
+            </div>
         </nav>
     </header>
-    
+
     <main>
-        <h1>Timothy Ebil</h1>
+        <h1 class="student-name">Timothy Ebil</h1>
         <div class="grid-container">
-            <!-- About Me Profile Card Section -->
             <section class="card">
-                <h2>About Me</h2>
-                <div class="profile-box">
-                    <p>My name is Timothy Ebil. I am currently pursuing my education in web development to master dynamic web fundamentals and build modern digital solutions. I enjoy technology, continuous learning, and exploring new programming frameworks. When I am not coding, I enjoy engaging with my community and taking on new intellectual challenges.</p>
-                    <img src="images/profile.jpg" alt="Profile photo of Timothy Ebil" class="profile-img" width="150" height="150">
-                </div>
-                
-                <h3>Oyam, Uganda</h3>
-                <hr class="card-divider">
-                
-                <div class="country-box">
-                    <div class="flag-wrapper">
-                        <img src="images/flag-uganda.jpg" alt="Official Flag of Uganda" class="flag-img" width="140" height="84">
-                        <p class="caption">Official Flag of Uganda</p>
+                <h2 class="card-header">About Me</h2>
+                <div class="card-content">
+                    <div class="profile-row">
+                        <p class="profile-text">My name is Timothy Ebil. I am currently pursuing my education in web development to master dynamic web fundamentals and build modern digital solutions. I enjoy technology, continuous learning, and exploring new programming frameworks. When I am not coding, I enjoy engaging with my community and taking on new intellectual challenges.</p>
+                        <img src="images/profile.jpg" alt="Profile photo of Timothy Ebil" class="profile-img" width="150" height="150">
                     </div>
-                    <p>Uganda is a landlocked country located in East Africa, known for its diverse landscape that encompasses the snow-capped Rwenzori Mountains and the immense Lake Victoria. It is celebrated for its abundant wildlife, vibrant culture, and friendly hospitality. Oyam is located in the Northern Region, offering rich historical context and natural scenery.</p>
+                    
+                    <h3 class="location-heading">Oyam, Uganda</h3>
+                    <hr class="card-divider">
+                    
+                    <div class="country-row">
+                        <div class="flag-wrapper">
+                            <img src="images/flag-uganda.jpg" alt="Official Flag of Uganda" class="flag-img" width="140" height="84">
+                            <p class="caption">Official Flag of<br>Uganda</p>
+                        </div>
+                        <p class="country-text">Uganda is a landlocked country located in East Africa, known for its diverse landscape that encompasses the snow-capped Rwenzori Mountains and the immense Lake Victoria. It is celebrated for its abundant wildlife, vibrant culture, and friendly hospitality. Oyam is located in the Northern Region, offering rich historical context and natural scenery.</p>
+                    </div>
                 </div>
             </section>
-            
-            <!-- Web Dev Resources Card Section -->
+
             <section class="card">
-                <h2>Web Dev Resources</h2>
-                <ul>
-                    <li><a href="https://dev.to" target="_blank" rel="noopener">Dev.to Community</a></li>
-                    <li><a href="https://smashingmagazine.com" target="_blank" rel="noopener">Smashing Magazine</a></li>
-                    <li><a href="https://css-tricks.com" target="_blank" rel="noopener">CSS Tricks</a></li>
-                    <li><a href="https://w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
-                    <li><a href="https://udemy.com" target="_blank" rel="noopener">Udemy</a></li>
-                    <li><a href="https://picsum.photos" target="_blank" rel="noopener">Lorem Picsum Image Placeholder</a></li>
-                </ul>
+                <h2 class="card-header">Web Dev Resources</h2>
+                <div class="card-content resources-box">
+                    <ul>
+                        <li><a href="https://dev.to" target="_blank" rel="noopener">Dev.to Community</a></li>
+                        <li><a href="https://smashingmagazine.com" target="_blank" rel="noopener">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com" target="_blank" rel="noopener">CSS Tricks</a></li>
+                        <li><a href="https://w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
+                        <li><a href="https://udemy.com" target="_blank" rel="noopener">Udemy</a></li>
+                        <li><a href="https://picsum.photos" target="_blank" rel="noopener">Lorem Picsum Image Placeholder</a></li>
+                    </ul>
+                </div>
             </section>
         </div>
     </main>
-    
+
     <footer>
-        <!-- Rubric Compliance Rule: Exactly two total paragraphs allowed inside the footer -->
-        <p>&copy; <span id="currentyear"></span> 🌺 Timothy Ebil 🌺 Uganda</p>
+        <p>&copy;<span id="currentyear"></span> 🌺 Timothy Ebil 🌺 Uganda</p>
         <p id="lastModified"></p>
     </footer>
 </body>
