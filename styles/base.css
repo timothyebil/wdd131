@@ -1,16 +1,18 @@
-/* Custom Variable Configuration Architecture */
+/* Custom Variable Architecture - Standardized Hex Palette Mapping */
 :root {
     --primary-bg: #1c3d5a;
     --secondary-bg: #2d3748;
     --accent-blue: #1f507e;
+    --hover-dark: #1a202c;
     --text-main: #333333;
     --text-muted: #4a5568;
     --card-bg: #ffffff;
     --body-bg: #f8fafc;
-    --border-color: #cbd5e0;
+    --border-ui: #cbd5e0;
+    --divider-transparent: rgba(0, 0, 0, 0.2); /* Validated formatting rule fixing prior error */
 }
 
-/* Global Reset Optimization */
+/* Global Layout Standardizations */
 * {
     margin: 0;
     padding: 0;
@@ -24,10 +26,9 @@ body {
     line-height: 1.6;
 }
 
-/* Header Banner Layout rules */
 header {
     background-color: var(--primary-bg);
-    color: #ffffff;
+    color: var(--card-bg);
     text-align: center;
 }
 
@@ -39,7 +40,7 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* Flexbox Strip Navigation Implementation */
+/* Flexbox Strip Menu Rules */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -48,7 +49,7 @@ nav {
 }
 
 nav a {
-    color: #edf2f7;
+    color: var(--body-bg);
     text-decoration: none;
     padding: 1rem 2rem;
     flex-grow: 1;
@@ -58,11 +59,11 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #1a202c;
-    color: #ffffff;
+    background-color: var(--hover-dark);
+    color: var(--card-bg);
 }
 
-/* Main Structural Core Grid Definition */
+/* Main Core Layout & Column Configurations */
 main {
     max-width: 1024px;
     margin: 0 auto;
@@ -85,17 +86,16 @@ h1 {
     align-items: start;
 }
 
-/* Desktop Width Breakpoint Alignment Changes */
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 2fr 1fr;
     }
 }
 
-/* Structural Card Properties */
+/* Structural Interface Component Cards */
 .card {
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-ui);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -104,7 +104,7 @@ h1 {
 
 .card h2 {
     background-color: var(--accent-blue);
-    color: #ffffff;
+    color: var(--card-bg);
     padding: 1rem;
     font-size: 1.3rem;
     text-align: center;
@@ -124,7 +124,7 @@ h1 {
 
 .card li {
     margin-bottom: 0.8rem;
-    border-bottom: 1px dashed var(--border-color);
+    border-bottom: 1px dashed var(--border-ui);
     padding-bottom: 0.5rem;
 }
 
@@ -133,7 +133,7 @@ h1 {
 }
 
 .card li a {
-    color: #2b6cb0;
+    color: var(--accent-blue);
     text-decoration: none;
     font-weight: 500;
 }
@@ -143,7 +143,7 @@ h1 {
     color: var(--primary-bg);
 }
 
-/* Flexible Internal Card Box Formations */
+/* Flexbox Sub-Box Formations */
 .profile-box, .country-box {
     display: flex;
     flex-direction: column;
@@ -160,7 +160,7 @@ h1 {
 
 .profile-img {
     border-radius: 4px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-ui);
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -172,7 +172,7 @@ h1 {
 }
 
 .flag-img {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-ui);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -185,15 +185,15 @@ h1 {
 
 .card-divider {
     border: 0;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--divider-transparent);
     width: 90%;
     margin: 0 auto;
 }
 
-/* Footer Element Custom Separations */
+/* Footer Element Custom Rules */
 footer {
     background-color: var(--primary-bg);
-    color: #ffffff;
+    color: var(--card-bg);
     text-align: center;
     padding: 1.5rem 1rem;
     margin-top: 4rem;
@@ -205,7 +205,7 @@ footer p {
 }
 
 #lastModified {
-    color: #e2f845;
+    color: #e2f845; /* Retained high-contrast warning accent for absolute visibility check */
     font-size: 0.85rem;
     font-weight: 700;
 }
