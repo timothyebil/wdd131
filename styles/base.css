@@ -1,6 +1,6 @@
-/* Color Palette Custom Contrast Variable Architecture */
+/* Color Palette Custom Contrast Variable Architecture (Standardized Blue Color Scheme) */
 :root {
-  --bg-dark-blue: #1c496d;      /* Navigation & Card Headers Background */
+  --bg-dark-blue: #1c496d;      /* Primary Blue Scheme - Header/Nav/Cards Background */
   --bg-footer: #163c5a;         /* Darker Blue for Footer Background */
   --bg-body: #f4f4f4;           /* Canvas Surface */
   --bg-white: #ffffff;          /* Card Interior Background */
@@ -11,9 +11,10 @@
   --text-caption: #555555;      /* Dark Charcoal Gray for Accessible Captions (Passes AA) */
   --text-js-yellow: #e4e731;    /* Bright Yellow Accent for JS Footer Information */
   
-  --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-smooth: all 0.3s ease;
 }
 
+/* Base Body Adjustments */
 body {
   font-family: 'Roboto', 'Open Sans', sans-serif;
   background-color: var(--bg-body);
@@ -31,7 +32,6 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  animation: slideDown 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
 
 #course-title {
@@ -52,6 +52,7 @@ nav {
   width: 100%;
 }
 
+/* Global Nav Link State Transitions */
 nav a {
   color: var(--text-light);
   text-decoration: none;
@@ -78,13 +79,13 @@ nav a::after {
 
 nav a:hover {
   color: var(--text-js-yellow);
-  text-shadow: 0 0 8px rgba(228, 231, 49, 0.4);
 }
 
 nav a:hover::after {
   width: 60%; 
 }
 
+/* Focus States Configured for Accessible Keyboard Navigation Users */
 nav a:focus-visible,
 #menu-toggle:focus-visible,
 .card li a:focus-visible {
@@ -125,10 +126,9 @@ main {
   font-size: 2.2rem;
   font-weight: 500;
   margin: 1.5rem 0;
-  opacity: 0;
-  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0.2s forwards;
 }
 
+/* Asymmetric 2-Column Responsive CSS Grid Container */
 .grid-container {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
@@ -143,15 +143,6 @@ main {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: var(--transition-smooth);
-  opacity: 0;
-}
-
-.grid-container .card:nth-child(1) {
-  animation: slideInLeft 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s forwards;
-}
-
-.grid-container .card:nth-child(2) {
-  animation: slideInRight 0.7s cubic-bezier(0.25, 0.8, 0.25, 1) 0.4s forwards;
 }
 
 .card:hover {
@@ -238,7 +229,7 @@ main {
 }
 
 .card li a {
-  color: #1b496d; 
+  color: #1b496d; /* Standardized deep blue matching style profile safely over white */
   text-decoration: none;
   font-weight: 500;
   display: inline-block;
@@ -275,8 +266,6 @@ footer {
   text-align: center;
   padding: 1.2rem 1rem;
   margin-top: 4rem;
-  opacity: 0;
-  animation: fadeIn 0.8s ease 0.6s forwards;
 }
 
 footer p {
@@ -289,32 +278,6 @@ footer p {
   font-size: 0.85rem;
 }
 
-/* STAGE ANIMATION KEYFRAMES RULES */
-@keyframes slideDown {
-  from { transform: translateY(-100%); }
-  to { transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 /* RESPONSIVE BREAKPOINT CONTROLS */
 @media (max-width: 820px) {
   .grid-container {
@@ -323,10 +286,6 @@ footer p {
   }
   .card:hover {
     transform: none; 
-  }
-  .grid-container .card:nth-child(1),
-  .grid-container .card:nth-child(2) {
-    animation: fadeInUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s forwards;
   }
 }
 
@@ -352,14 +311,9 @@ footer p {
     background-color: var(--bg-dark-blue);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     z-index: 5;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: var(--transition-smooth);
   }
   #nav-links.open {
     display: flex;
-    opacity: 1;
-    transform: translateY(0);
   }
   nav a {
     padding: 1rem 0;
