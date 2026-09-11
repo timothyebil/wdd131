@@ -229,7 +229,7 @@ main {
 }
 
 .card li a {
-  color: #1b496d; /* Standardized deep blue matching style profile safely over white */
+  color: #1b496d; 
   text-decoration: none;
   font-weight: 500;
   display: inline-block;
