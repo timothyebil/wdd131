@@ -190,3 +190,15 @@ footer p {
     margin-left: 0;
     margin-right: 0;
 }
+
+/* Sanity-Checked CSS Rules for W3C Validation Badges */
+.badge-row {
+    margin-top: 1.5rem;
+}
+
+.validation-badge {
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
+}
