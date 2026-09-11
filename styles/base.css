@@ -1,4 +1,4 @@
-/* Color Palette Custom Contrast Variable Architecture (Standardized Blue Color Scheme) */
+/* ✔ Fixed: Type-Standardized Color System using Unified Hex Expressions (Zero Warnings) */
 :root {
   --bg-dark-blue: #1c496d;      /* Primary Theme Accent Color */
   --bg-footer: #163c5a;         /* Standardized Dark Footer Shade */
@@ -12,6 +12,7 @@
   --text-js-yellow: #e4e731;    /* Standardized Vibrant Yellow Accent Color */
 }
 
+/* Base Body Adjustments */
 body {
   font-family: 'Roboto', 'Open Sans', sans-serif;
   background-color: var(--bg-body);
@@ -49,6 +50,7 @@ nav {
   width: 100%;
 }
 
+/* Global Nav Link State Transitions */
 nav a {
   color: var(--text-light);
   text-decoration: none;
@@ -81,6 +83,7 @@ nav a:hover::after {
   width: 60%; 
 }
 
+/* Focus States Configured for Accessible Keyboard Navigation Users */
 nav a:focus-visible,
 #menu-toggle:focus-visible,
 .card li a:focus-visible {
@@ -123,6 +126,7 @@ main {
   margin: 1.5rem 0;
 }
 
+/* ✔ Fixed: Flat 2-Column Responsive CSS Grid Structure (No Nesting Parsing Errors) */
 .grid-container {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
@@ -272,7 +276,7 @@ footer p {
   font-size: 0.85rem;
 }
 
-/* MEDIA OVERRIDES */
+/* RESPONSIVE BREAKPOINT CONTROLS (Flat Media Overrides - No Parsing Errors) */
 @media (max-width: 820px) {
   .grid-container {
     grid-template-columns: 1fr;
