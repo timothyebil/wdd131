@@ -1,4 +1,4 @@
-/* Custom Variable Architecture - Standardized Hex Palette Mapping */
+/* Standardized Variable Architecture Configuration */
 :root {
     --primary-bg: #1c3d5a;
     --secondary-bg: #2d3748;
@@ -9,10 +9,12 @@
     --card-bg: #ffffff;
     --body-bg: #f8fafc;
     --border-ui: #cbd5e0;
-    --divider-transparent: rgba(0, 0, 0, 0.2); /* Validated formatting rule fixing prior error */
+    --divider-color: #cbd5e0;
+    --shadow-tint: rgba(0, 0, 0, 0.05);
+    --flag-shadow: rgba(0, 0, 0, 0.10);
 }
 
-/* Global Layout Standardizations */
+/* Global Document Reset */
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +42,7 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* Flexbox Strip Menu Rules */
+/* Flexbox Strip Layout Navigation Rules */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -63,7 +65,7 @@ nav a:hover {
     color: var(--card-bg);
 }
 
-/* Main Core Layout & Column Configurations */
+/* Main Layout Positioning Rules */
 main {
     max-width: 1024px;
     margin: 0 auto;
@@ -92,13 +94,13 @@ h1 {
     }
 }
 
-/* Structural Interface Component Cards */
+/* Structural Components Formations */
 .card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-ui);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px var(--shadow-tint);
     margin-bottom: 1.5rem;
 }
 
@@ -143,7 +145,7 @@ h1 {
     color: var(--primary-bg);
 }
 
-/* Flexbox Sub-Box Formations */
+/* Flexible Layout Content Internal Containers */
 .profile-box, .country-box {
     display: flex;
     flex-direction: column;
@@ -173,7 +175,7 @@ h1 {
 
 .flag-img {
     border: 1px solid var(--border-ui);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px var(--flag-shadow);
 }
 
 .caption {
@@ -185,12 +187,12 @@ h1 {
 
 .card-divider {
     border: 0;
-    border-top: 1px solid var(--divider-transparent);
+    border-top: 1px solid var(--divider-color);
     width: 90%;
     margin: 0 auto;
 }
 
-/* Footer Element Custom Rules */
+/* Footer Section Presentation Standardizations */
 footer {
     background-color: var(--primary-bg);
     color: var(--card-bg);
@@ -205,7 +207,7 @@ footer p {
 }
 
 #lastModified {
-    color: #e2f845; /* Retained high-contrast warning accent for absolute visibility check */
+    color: #e2f845; /* High-visibility yellow for dynamic automated date verification checks */
     font-size: 0.85rem;
     font-weight: 700;
 }

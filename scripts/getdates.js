@@ -4,13 +4,13 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Compute and insert current calendar year
+    // 1. Target and write the current system year
     const yearDisplayElement = document.getElementById("currentyear");
     if (yearDisplayElement) {
         yearDisplayElement.textContent = new Date().getFullYear();
     }
 
-    // 2. Compute and append the live server document file modification metadata string
+    // 2. Target and construct the system last modified date metadata values
     const modificationDisplayElement = document.getElementById("lastModified");
     if (modificationDisplayElement) {
         modificationDisplayElement.textContent = `Last Modification: ${document.lastModified}`;
