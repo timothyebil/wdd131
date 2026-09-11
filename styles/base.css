@@ -14,7 +14,7 @@
     --flag-shadow: rgba(0, 0, 0, 0.10);
 }
 
-/* Global Document Reset */
+/* Global Elements Master Reset */
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +42,7 @@ header {
     letter-spacing: 0.5px;
 }
 
-/* Flexbox Strip Layout Navigation Rules */
+/* Flexbox Strip Navigation Deployment */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -65,7 +65,7 @@ nav a:hover {
     color: var(--card-bg);
 }
 
-/* Main Layout Positioning Rules */
+/* Core Layout Positioning Framework */
 main {
     max-width: 1024px;
     margin: 0 auto;
@@ -88,13 +88,14 @@ h1 {
     align-items: start;
 }
 
+/* Desktop Fluid Breakpoint Adjustments */
 @media (min-width: 768px) {
     .grid-container {
         grid-template-columns: 2fr 1fr;
     }
 }
 
-/* Structural Components Formations */
+/* Interface Component Cards Layout */
 .card {
     background-color: var(--card-bg);
     border: 1px solid var(--border-ui);
@@ -145,7 +146,7 @@ h1 {
     color: var(--primary-bg);
 }
 
-/* Flexible Layout Content Internal Containers */
+/* Flexible Internal Layout Block Configurations */
 .profile-box, .country-box {
     display: flex;
     flex-direction: column;
@@ -207,7 +208,7 @@ footer p {
 }
 
 #lastModified {
-    color: #e2f845; /* High-visibility yellow for dynamic automated date verification checks */
+    color: #e2f845; /* Explicit visibility text highlighting for dynamic date validation tool passes */
     font-size: 0.85rem;
     font-weight: 700;
 }
