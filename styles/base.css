@@ -48,7 +48,7 @@ nav a {
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Assignment Rule: Responsive hover layout animations */
+/* Assignment Rule: Responsive hover layout animations without layout shifts */
 nav a:hover {
     color: #3498db; 
     border-bottom-color: #3498db; 
@@ -133,7 +133,7 @@ h1 {
     font-style: italic;
 }
 
-/* Cleaned separator properties for complete validation pass */
+/* Cleaned separator properties for complete W3C Jigsaw compliance */
 .card-divider {
     border-top-style: none;
     border-right-style: none;
@@ -191,16 +191,4 @@ footer p {
     margin-bottom: 0.5rem;
     margin-left: 0;
     margin-right: 0;
-}
-
-/* CSS Validator compliance rules for Badges */
-.badge-row {
-    margin-top: 1.5rem;
-}
-
-.validation-badge {
-    border-top-style: none;
-    border-right-style: none;
-    border-bottom-style: none;
-    border-left-style: none;
 }
