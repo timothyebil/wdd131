@@ -1,207 +1,211 @@
-/* Base Style Resets & Architecture Metrics */
+/* Custom Variable Configuration Architecture */
+:root {
+    --primary-bg: #1c3d5a;
+    --secondary-bg: #2d3748;
+    --accent-blue: #1f507e;
+    --text-main: #333333;
+    --text-muted: #4a5568;
+    --card-bg: #ffffff;
+    --body-bg: #f8fafc;
+    --border-color: #cbd5e0;
+}
+
+/* Global Reset Optimization */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --primary-blue: #004b87;    /* Primary brand accent tone */
-    --secondary-blue: #1b4d79;  /* Secondary card container color */
-    --nav-ribbon: #222222;      /* Midnight theme menu base ribbon */
-    --body-text: #333333;
-    --canvas-bg: #ffffff;
-    --outline-border: #b8c6d1;  /* Exact soft gray card frame contour border */
-}
-
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--canvas-bg);
-    color: var(--body-text);
-    line-height: 1.5;
+    background-color: var(--body-bg);
+    color: var(--text-main);
+    line-height: 1.6;
 }
 
-/* Header & Menu Layout Architectures */
+/* Header Banner Layout rules */
 header {
-    background-color: var(--primary-blue);
+    background-color: var(--primary-bg);
     color: #ffffff;
     text-align: center;
 }
 
-/* Requirement: Header target elements must handle display block configuration rules */
 #course-title {
     display: block;
-    font-size: 1.3rem;
-    font-weight: 400;
-    padding: 1rem 0;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
-/* Requirement: Active deployment of CSS Flexbox mechanics across the navigation strip */
+/* Flexbox Strip Navigation Implementation */
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    background-color: var(--nav-ribbon);
-    max-width: 100%;
+    background-color: var(--secondary-bg);
 }
 
 nav a {
-    color: #ffffff;
+    color: #edf2f7;
     text-decoration: none;
-    padding: 0.75rem 2rem;
+    padding: 1rem 2rem;
     flex-grow: 1;
     text-align: center;
-    font-size: 0.95rem;
-    transition: background-color 0.2s ease;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Requirement: Navigation items must execute a polished hover UI translation response */
 nav a:hover {
-    background-color: #444444;
+    background-color: #1a202c;
+    color: #ffffff;
 }
 
-/* Main Display Framing Boundaries */
-/* Requirement: Horizontally centered block container layout using strict max-width boundaries */
+/* Main Structural Core Grid Definition */
 main {
     max-width: 1024px;
-    margin: 2.5rem auto;
-    padding: 0 1.5rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
 h1 {
     text-align: center;
+    font-size: 2.5rem;
+    color: var(--secondary-bg);
     margin-bottom: 2rem;
-    font-size: 2.2rem;
-    font-weight: 400;
-    color: #111111;
+    border-bottom: 3px solid var(--accent-blue);
+    padding-bottom: 0.5rem;
 }
 
-/* Requirement: Execution of CSS Grid rules for card column distributions */
 .grid-container {
     display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     align-items: start;
 }
 
-/* Fluid responsive breakpoint layouts for tablet/mobile device structural scaling views */
-@media (max-width: 768px) {
+/* Desktop Width Breakpoint Alignment Changes */
+@media (min-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr 1fr;
     }
 }
 
-/* Isolated Card Blocks Custom Styles */
+/* Structural Card Properties */
 .card {
-    background-color: #ffffff;
-    border: 1px solid var(--outline-border);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
-    padding-bottom: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
 }
 
 .card h2 {
-    background-color: var(--secondary-blue);
+    background-color: var(--accent-blue);
     color: #ffffff;
-    padding: 0.6rem 1rem;
-    font-size: 1.05rem;
-    font-weight: 500;
+    padding: 1rem;
+    font-size: 1.3rem;
     text-align: center;
-    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 .card h3 {
     text-align: center;
-    margin: 1.5rem 0 1rem 0;
-    font-size: 1.2rem;
+    color: var(--secondary-bg);
+    margin: 1.5rem 0 0.5rem;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 1.5rem;
+}
+
+.card li {
+    margin-bottom: 0.8rem;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.card li:last-child {
+    border-bottom: none;
+}
+
+.card li a {
+    color: #2b6cb0;
+    text-decoration: none;
     font-weight: 500;
 }
 
-/* Nested About Me Flexible Content Formations */
-.profile-box, .country-box {
-    display: flex;
-    gap: 1.5rem;
-    padding: 0 1.5rem;
+.card li a:hover {
+    text-decoration: underline;
+    color: var(--primary-bg);
 }
 
-.profile-box p, .country-box p {
-    font-size: 0.95rem;
-    flex: 1;
+/* Flexible Internal Card Box Formations */
+.profile-box, .country-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+@media (min-width: 480px) {
+    .profile-box, .country-box {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
 
 .profile-img {
-    width: 130px;
-    height: auto;
-    border: 1px solid #cccccc;
-}
-
-.card-divider {
-    border: 0;
-    height: 1px;
-    background-color: #cccccc;
-    margin: 1.5rem 1.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .flag-wrapper {
     text-align: center;
-    width: 160px;
+    min-width: 140px;
 }
 
 .flag-img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #dddddd;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .caption {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-style: italic;
-    color: #555555;
-    margin-top: 0.4rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
 }
 
-/* Web Development Resources Unordered Index List Styles */
-.card ul {
-    list-style-type: none;
-    padding: 0 1.5rem;
+.card-divider {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    width: 90%;
+    margin: 0 auto;
 }
 
-.card li {
-    margin-bottom: 0.5rem;
-    padding-left: 1rem;
-    position: relative;
+/* Footer Element Custom Separations */
+footer {
+    background-color: var(--primary-bg);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 4rem;
     font-size: 0.95rem;
 }
 
-.card li::before {
-    content: "•";
-    color: #000000;
-    position: absolute;
-    left: 0;
-}
-
-.card li a {
-    color: #002d62;
-    text-decoration: underline;
-}
-
-.card li a:hover {
-    color: #ff0044;
-}
-
-/* Footer Execution Fields */
-footer {
-    background-color: var(--primary-blue);
-    color: #ffffff;
-    text-align: center;
-    padding: 1.2rem 0;
-    margin-top: 5rem;
-    font-size: 0.9rem;
-}
-
 footer p {
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
 }
 
 #lastModified {
-    color: #e5c158;
+    color: #e2f845;
+    font-size: 0.85rem;
+    font-weight: 700;
 }

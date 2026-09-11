@@ -1,9 +1,18 @@
-// Target the dynamic year span element frame container parameters
-const currentYearSpan = document.getElementById("currentyear");
-// Extract the matching calendar execution timestamp variables
-currentYearSpan.textContent = new Date().getFullYear();
+/**
+ * WDD 131 Dynamic Footer Data Scripts
+ * Timothy Ebil - Project Processing Interface
+ */
 
-// Intercept target node parameters pointing to the lastModified string data field
-const lastModifiedParagraph = document.getElementById("lastModified");
-// Output matching dynamic string lines using textContent methods natively
-lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Resolve and insert the accurate current calendar year
+    const currentYearElement = document.getElementById("currentyear");
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+
+    // 2. Resolve and format the system document modification record
+    const lastModifiedElement = document.getElementById("lastModified");
+    if (lastModifiedElement) {
+        lastModifiedElement.textContent = `Last Modification: ${document.lastModified}`;
+    }
+});
