@@ -1,18 +1,14 @@
-/**
- * WDD 131 Dynamic Footer Data Handling Interface
- * Student: Timothy Ebil
- */
-
+// Dynamic Date Functions for Course Compliance
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Target and write the current system year
-    const yearDisplayElement = document.getElementById("currentyear");
-    if (yearDisplayElement) {
-        yearDisplayElement.textContent = new Date().getFullYear();
+    // Populate the current year dynamically
+    const currentYearSpan = document.getElementById("currentyear");
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
     }
 
-    // 2. Target and construct the system last modified date metadata values
-    const modificationDisplayElement = document.getElementById("lastModified");
-    if (modificationDisplayElement) {
-        modificationDisplayElement.textContent = `Last Modification: ${document.lastModified}`;
+    // Populate the last modified date of the document
+    const lastModifiedParagraph = document.getElementById("lastModified");
+    if (lastModifiedParagraph) {
+        lastModifiedParagraph.textContent = `Last Modified: ${document.lastModified}`;
     }
 });
