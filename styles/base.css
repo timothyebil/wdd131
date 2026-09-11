@@ -8,14 +8,14 @@
   --text-light: #ffffff;        /* Primary Light Text */
   --border-card: #b0c4de;       /* Outer Muted Outline Border for Cards */
   --border-divider: #cccccc;    /* HR Divider Line Color */
-  --text-caption: #555555;      /* Dark Charcoal Gray for Accessible Captions */
+  --text-caption: #555555;      /* Dark Charcoal Gray for Accessible Captions (Passes AA) */
   --text-js-yellow: #e4e731;    /* Bright Yellow Accent for JS Footer Information */
   
   --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 body {
-  font-family: 'Open Sans', 'Roboto', sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   background-color: var(--bg-body);
   color: var(--text-main);
   margin: 0;
@@ -82,7 +82,7 @@ nav a:hover {
 }
 
 nav a:hover::after {
-  width: 60%;
+  width: 60%; 
 }
 
 nav a:focus-visible,
@@ -159,7 +159,7 @@ main {
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
-.card-header {
+.card h2 {
   background-color: var(--bg-dark-blue);
   color: var(--text-light);
   margin: 0;
@@ -296,36 +296,18 @@ footer p {
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeIn {
@@ -339,11 +321,9 @@ footer p {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
   .card:hover {
     transform: none; 
   }
-
   .grid-container .card:nth-child(1),
   .grid-container .card:nth-child(2) {
     animation: fadeInUp 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s forwards;
@@ -355,16 +335,13 @@ footer p {
     padding: 1rem;
     position: relative;
   }
-
   nav {
     justify-content: flex-end;
     padding-right: 1.5rem;
   }
-  
   #menu-toggle {
     display: flex;
   }
-
   #nav-links {
     display: none;
     flex-direction: column;
@@ -379,23 +356,19 @@ footer p {
     transform: translateY(-10px);
     transition: var(--transition-smooth);
   }
-
   #nav-links.open {
     display: flex;
     opacity: 1;
     transform: translateY(0);
   }
-  
   nav a {
     padding: 1rem 0;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
   nav a::after {
     display: none; 
   }
-
   #menu-toggle.open .bar:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
@@ -405,13 +378,11 @@ footer p {
   #menu-toggle.open .bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
   }
-
   .profile-row, .country-row {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  
   .profile-img, .flag-wrapper {
     margin-top: 0.5rem;
   }
