@@ -3,8 +3,8 @@ body {
     font-family: 'Open Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fcfcfd; /* Clean background passing AA contrast rules */
-    color: #1a1a1a; /* Dark gray for absolute readability comfort */
+    background-color: #fcfcfd;
+    color: #1a1a1a;
 }
 
 h1, h2, h3 {
@@ -14,7 +14,7 @@ h1, h2, h3 {
 
 /* Header & Nav Layout */
 header {
-    background-color: #1c2833; /* Dark Navy providing flawless contrast against white elements */
+    background-color: #1c2833;
     color: #ffffff;
     padding: 1.5rem;
     display: flex;
@@ -39,8 +39,7 @@ nav a {
     text-decoration: none;
     font-weight: 500;
     padding-bottom: 4px;
-    /* Rubric Rule 4: Border-bottom acts as structural spaceholder to block text jumps */
-    border-bottom: 2px solid transparent; 
+    border-bottom: 2px solid transparent;
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -49,7 +48,7 @@ nav a:hover {
     border-bottom: 2px solid #1abc9c; 
 }
 
-/* Main Grid Layout (Rubric Rule 7: Proximity, Alignment, Repetition) */
+/* Main Layout Grid */
 main {
     max-width: 1200px;
     margin: 2.5rem auto;
@@ -76,7 +75,7 @@ h1 {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    border-top: 5px solid #1c2833; /* Visual repeating signature branding element */
+    border-top: 5px solid #1c2833;
 }
 
 .card h2 {
@@ -96,7 +95,7 @@ h1 {
 
 .profile-img, .flag-img {
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .flag-wrapper {
@@ -105,15 +104,16 @@ h1 {
 
 .caption {
     font-size: 0.85rem;
-    color: #4a4a4a; /* Completely meets high contrast check thresholds */
+    color: #4a4a4a;
     margin-top: 6px;
     font-style: italic;
 }
 
+/* Fixed for W3C Validator Compliance */
 .card-divider {
-    border: 0;
+    border: none;
     height: 1px;
-    background: #e1e4e6;
+    background-color: #e1e4e6;
     margin: 2rem 0;
 }
 
@@ -129,7 +129,7 @@ h1 {
 }
 
 .card li a {
-    color: #1b6ca8; /* Vivid high contrast blue for accessibility standard conformity */
+    color: #1b6ca8;
     text-decoration: none;
     font-weight: 600;
 }
