@@ -39,13 +39,15 @@ nav a {
     text-decoration: none;
     font-weight: 500;
     padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 nav a:hover {
     color: #1abc9c; 
-    border-bottom: 2px solid #1abc9c; 
+    border-bottom-color: #1abc9c; 
 }
 
 /* Main Layout Grid */
@@ -58,11 +60,13 @@ main {
 h1 {
     text-align: center;
     margin-bottom: 2.5rem;
-    border-bottom: 3px solid #1c2833;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #1c2833;
     padding-bottom: 0.5rem;
 }
 
-/* The Layout Grid Structure */
+/* Layout Grid Structure */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -71,16 +75,20 @@ h1 {
 
 /* Repeated Card Architecture */
 .card {
-    background: #ffffff;
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    border-top: 5px solid #1c2833;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-top-color: #1c2833;
 }
 
 .card h2 {
     margin-top: 0;
-    border-bottom: 1px solid #e1e4e6;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #e1e4e6;
     padding-bottom: 0.5rem;
 }
 
@@ -109,12 +117,18 @@ h1 {
     font-style: italic;
 }
 
-/* Fixed for W3C Validator Compliance */
+/* Fully Deconstructed properties for W3C Service compliance */
 .card-divider {
-    border: none;
+    border-top-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-left-style: none;
     height: 1px;
     background-color: #e1e4e6;
-    margin: 2rem 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /* Document Resource Anchor Styles */
@@ -149,5 +163,8 @@ footer {
 }
 
 footer p {
-    margin: 0.5rem 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+    margin-right: 0;
 }
