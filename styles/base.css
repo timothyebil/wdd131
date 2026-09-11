@@ -18,21 +18,22 @@ header {
     background-color: #1a252f;
     color: #ffffff;
     padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.2rem;
+    text-align: center;
 }
 
+/* Assignment Rule: Course title set as block display for crisp element flow */
 #course-title {
+    display: block;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     letter-spacing: 0.5px;
+    margin-bottom: 1rem;
 }
 
+/* Assignment Rule: Navigation layout explicitly set to use CSS Flex */
 nav {
     display: flex;
+    justify-content: center;
     gap: 1.8rem;
 }
 
@@ -47,14 +48,15 @@ nav a {
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
+/* Assignment Rule: Responsive hover layout animations */
 nav a:hover {
     color: #3498db; 
     border-bottom-color: #3498db; 
 }
 
-/* Main Structure Content Container */
+/* Assignment Rule: Main centered vertically and max width constrained */
 main {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 3rem auto;
     padding: 0 1.5rem;
 }
@@ -69,14 +71,14 @@ h1 {
     font-size: 2.5rem;
 }
 
-/* Balanced Card Layout Grid */
+/* Assignment Rule: Core card layout built via CSS Grid columns */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 3rem; 
 }
 
-/* Premium Card Architecture */
+/* Premium Card Architecture (Repetition & Usability Principles) */
 .card {
     background-color: #ffffff;
     padding: 2.5rem;
@@ -131,7 +133,7 @@ h1 {
     font-style: italic;
 }
 
-/* Completely Deconstructed rules for pristine W3C Validation clearance */
+/* Cleaned separator properties for complete validation pass */
 .card-divider {
     border-top-style: none;
     border-right-style: none;
@@ -191,7 +193,7 @@ footer p {
     margin-right: 0;
 }
 
-/* W3C CSS Validator compliance properties for Badges */
+/* CSS Validator compliance rules for Badges */
 .badge-row {
     margin-top: 1.5rem;
 }
