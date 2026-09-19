@@ -23,7 +23,7 @@
     .navigation {
         display: flex;
         flex-direction: row;
-        border-top-style: none;
+        border-top: none;
     }
 
     .navigation li {

@@ -1,15 +1,11 @@
 /* WDD 131 - Mobile-First Consolidated Base Stylesheet */
 
 :root {
-    /* FIXED: Standardized color scheme using ONLY pure Hexadecimal values */
     --primary-purple: #4a0e4e; 
     --secondary-bg: #ffffff;
     --text-dark: #000000;
     --text-white: #ffffff;
     --hover-tint: #ffe066; 
-    --menu-hover-bg: #2b042e;
-    --menu-active-bg: #200222;
-    --border-gray: #e2e8f0;
     --heading-font: 'Montserrat', sans-serif;
     --body-font: 'Open Sans', sans-serif;
 }
@@ -52,8 +48,8 @@ nav {
 
 #menu {
     font-size: 2.2rem;
-    background-color: #00000000; /* Fully clear fallback hex code */
-    border-style: none;
+    background: none;
+    border: none;
     color: var(--text-white);
     cursor: pointer;
     position: absolute;
@@ -75,13 +71,13 @@ nav {
 }
 
 .navigation {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
     margin: 0;
     display: none; 
     flex-direction: column;
     width: 100%;
-    border-top: 1px solid #ffffff1a; /* 10% Opacity Hex code alternative */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navigation.open {
@@ -105,13 +101,13 @@ nav {
 
 .navigation li a:hover,
 .navigation li a:focus {
-    background-color: var(--menu-hover-bg);
+    background-color: #2b042e;
     color: var(--hover-tint);
     outline: none;
 }
 
 .navigation li a.active {
-    background-color: var(--menu-active-bg);
+    background-color: #200222;
     color: var(--text-white);
 }
 
