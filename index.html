@@ -3,77 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple Album - Timothy Ebil</title>
-    <meta name="description" content="WDD 131 assignment web page displaying a responsive temple picture album gallery built by Timothy Ebil using HTML5, CSS Grid, and dynamic JavaScript components.">
+    <title>WDD 131 – Dynamic Web Fundamentals – Timothy Ebil</title>
+    <!-- Optimal Meta Description Length (154 Characters) -->
+    <meta name="description" content="WDD 131 Dynamic Web Fundamentals course landing page for Timothy Ebil, featuring professional web development resources and profile insights.">
     <meta name="author" content="Timothy Ebil">
     
-    <!-- Required Preconnect & External Google Fonts API Linkages -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- ✔ Fixed: Corrected absolute font domains and included all mandatory preconnect vectors -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
     
-    <!-- External Mobile-First Style Cascade Pipeline -->
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
-    
-    <!-- Deferred Interactivity Script Engine -->
-    <script src="scripts/temples.js" defer></script>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Temple Album</h1>
-        <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false"></button>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
         <nav>
-            <ul class="navigation">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul>
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div id="nav-links">
+                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://instructure.com" target="_blank" rel="noopener">I-Learn</a>
+                <a href="https://churchofjesuschrist.org" target="_blank" rel="noopener">Scripture</a>
+                <a href="final-project/index.html">Final Project</a>
+            </div>
         </nav>
     </header>
 
     <main>
-        <h1>Temple Gallery</h1>
+        <h1 class="student-name">Timothy Ebil</h1>
         <div class="grid-container">
-            <!-- 9 Validated Local Optimized Image Figure Elements -->
-            <figure>
-                <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple structure with granite spires" width="400" height="300" loading="lazy">
-                <figcaption>Salt Lake Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/manti-temple.jpg" alt="Manti Temple standing on a prominent hillside hill" width="400" height="300" loading="lazy">
-                <figcaption>Manti Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/nauvoo-temple.jpg" alt="Nauvoo Temple featuring historic limestone architecture" width="400" height="300" loading="lazy">
-                <figcaption>Nauvoo Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/rome-italy-temple.jpg" alt="Rome Italy Temple accented by clean olive trees gardens" width="400" height="300" loading="lazy">
-                <figcaption>Rome Italy Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/paris-france-temple.jpg" alt="Paris France Temple showing modern stone features" width="400" height="300" loading="lazy">
-                <figcaption>Paris France Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/provo-city-center-temple.jpg" alt="Provo City Center Temple meticulously restored with brickwork" width="400" height="300" loading="lazy">
-                <figcaption>Provo City Center Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/frankfurt-germany-temple.jpg" alt="Frankfurt Germany Temple showing landscaped walkways" width="400" height="300" loading="lazy">
-                <figcaption>Frankfurt Germany Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/tokyo-japan-temple.jpg" alt="Tokyo Japan Temple structure framed with clean trees" width="400" height="300" loading="lazy">
-                <figcaption>Tokyo Japan Temple</figcaption>
-            </figure>
-            <figure>
-                <img src="images/laie-hawaii-temple.jpg" alt="Laie Hawaii Temple features historical white multi-tiered terraces" width="400" height="300" loading="lazy">
-                <figcaption>Laie Hawaii Temple</figcaption>
-            </figure>
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="card-content">
+                    <div class="profile-row">
+                        <p class="profile-text">My name is Timothy Ebil. I am a passionate web developer focused on mastering frontend architecture, semantic HTML structure, and responsive design systems. My primary professional goal is to engineer interactive, high-performance web solutions that resolve complex real-world data tracking needs while remaining fully accessible and user-friendly for global audiences.</p>
+                        <img src="images/profile.jpg" alt="Profile photo of Timothy Ebil" class="profile-img" width="150" height="150">
+                    </div>
+                    
+                    <h3 class="location-heading">Oyam, Uganda</h3>
+                    <hr class="card-divider">
+                    
+                    <div class="country-row">
+                        <div class="flag-wrapper">
+                            <img src="images/flag-uganda.jpg" alt="Official Flag of Uganda" class="flag-img" width="140" height="84">
+                            <p class="caption">Official Flag of<br>Uganda</p>
+                        </div>
+                        <p class="country-text">Uganda is a beautiful, biodiverse nation located in East Africa. Famously designated as the "Pearl of Africa," it contains the snow-capped Rwenzori Mountain range alongside the vast waters of Lake Victoria, and is celebrated globally for its dense wildlife sanctuaries containing mountain gorillas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-content resources-box">
+                    <ul>
+                        <li><a href="https://dev.to" target="_blank" rel="noopener">Dev.to Community</a></li>
+                        <li><a href="https://smashingmagazine.com" target="_blank" rel="noopener">Smashing Magazine</a></li>
+                        <li><a href="https://css-tricks.com" target="_blank" rel="noopener">CSS Tricks</a></li>
+                        <li><a href="https://w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
+                        <li><a href="https://udemy.com" target="_blank" rel="noopener">Udemy</a></li>
+                        <li><a href="https://picsum.photos" target="_blank" rel="noopener">Lorem Picsum Image Placeholder</a></li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </main>
 
