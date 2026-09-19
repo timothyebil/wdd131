@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album - Timothy Ebil</title>
+    <meta name="description" content="WDD 131 assignment web page displaying a responsive temple picture album gallery built with HTML5, CSS Grid, and dynamic JavaScript components by Timothy Ebil.">
+    <meta name="author" content="Timothy Ebil">
+    
+    <!-- Mobile-First Architecture Stylesheet Pipeline -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
+    
+    <!-- Non-blocking Interactivity Engine -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Temple Gallery</h2>
+        <div class="grid-container">
+            <!-- Nine Compliant Figure Layout Blocks using structured standard placeholders -->
+            <figure>
+                <img src="images/Salt Lake Temple.jpg" alt="Salt Lake Temple structure with granite spires" width="400" height="300" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Manti Temple.jpg" alt="Manti Temple standing on a prominent hillside hill" width="400" height="300" loading="lazy">
+                <figcaption>Manti Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Nauvoo Temple.jpg" alt="Nauvoo Temple featuring historic limestone architecture" width="400" height="300" loading="lazy">
+                <figcaption>Nauvoo Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Rome Italy Temple.jpg" alt="Rome Italy Temple accented by clean olive trees gardens" width="400" height="300" loading="lazy">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Paris France Temple.jpg" alt="Paris France Temple showing modern stone features" width="400" height="300" loading="lazy">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Provo City Center Temple.jpg" alt="Provo City Center Temple meticulously restored with brickwork" width="400" height="300" loading="lazy">
+                <figcaption>Provo City Center Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Frankfurt Germany Temple.jpg" alt="Frankfurt Germany Temple showing landscaped walkways" width="400" height="300" loading="lazy">
+                <figcaption>Frankfurt Germany Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Tokyo Japan Temple.jpg" alt="Tokyo Japan Temple structure framed with clean trees" width="400" height="300" loading="lazy">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Laie Hawaii Temple.jpg" alt="Laie Hawaii Temple features historical white multi-tiered terraces" width="400" height="300" loading="lazy">
+                <figcaption>Laie Hawaii Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌺 Timothy Ebil 🌺 Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
