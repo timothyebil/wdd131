@@ -1,4 +1,4 @@
-/* WDD 131 - Desktop View Adjustments (Linked via Media Query Boundary) */
+/* WDD 131 - Desktop Layout Responsive Override Style File */
 
 header {
     flex-direction: row;
@@ -15,7 +15,7 @@ nav {
     width: auto;
 }
 
-/* Suppress mobile controls on large screens */
+/* Hide responsive menu controls when outside mobile display boundaries */
 #menu {
     display: none;
 }
@@ -35,9 +35,9 @@ nav {
     font-size: 1.1rem;
 }
 
-/* Grid Restructuring Controls via repeat and auto-fit */
+/* Multi-Column CSS Grid Expansion utilizing repeat and auto-fit minmax functions */
 main {
-    max-width: 1200px; /* Expand maximum content area limit smoothly on wider displays */
+    max-width: 1200px; 
 }
 
 .grid-container {
