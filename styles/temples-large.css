@@ -1,10 +1,10 @@
-/* WDD 131 - Desktop View Custom Media Query Pipeline Adjustments */
+/* WDD 131 - Desktop Responsive Adjustments Style Stream File */
 
 header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
+    padding: 1rem 3rem;
 }
 
 header h1 {
@@ -15,6 +15,7 @@ nav {
     width: auto;
 }
 
+/* Completely dismiss mobile hamburger controls on large viewport states */
 #menu {
     display: none;
 }
@@ -30,15 +31,16 @@ nav {
 }
 
 .navigation li a {
-    padding: 0.6rem 1.4rem;
-    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+    font-size: 1.1rem;
 }
 
+/* Multi-Column CSS Grid Generation utilizing repeat and auto-fit */
 main {
-    max-width: 1200px;
+    max-width: 1200px; /* Expand maximum boundaries safely on large viewports */
 }
 
 .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }

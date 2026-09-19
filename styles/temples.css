@@ -1,9 +1,8 @@
-/* WDD 131 - Mobile-First Consolidated Thematic Architecture */
+/* WDD 131 - Mobile-First Base Framework Architecture Stylesheet */
 
 :root {
     --primary-purple: #4a0e4e; 
     --secondary-bg: #ffffff;
-    --card-shadow: rgba(0, 0, 0, 0.04);
     --text-dark: #000000;
     --text-white: #ffffff;
     --hover-tint: #ffe066; 
@@ -24,7 +23,6 @@ body {
     line-height: 1.5;
 }
 
-/* Header & Flexbox Branding Container Block */
 header {
     background-color: var(--primary-purple);
     color: var(--text-white);
@@ -42,14 +40,13 @@ header h1 {
     font-weight: 700;
 }
 
-/* Strict Layout Rules targeting Nav Element exclusively */
+/* Explicit Flexbox Layout Engine rule on Nav element */
 nav {
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-/* Interface Toggle Controller */
 #menu {
     font-size: 2.2rem;
     background: none;
@@ -74,7 +71,6 @@ nav {
     content: "❌";
 }
 
-/* Mobile Nav Context Menu Rules */
 .navigation {
     list-style: none;
     padding: 0;
@@ -104,7 +100,7 @@ nav {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Flawless WCAG AA Contrast Overlays */
+/* Flawless WCAG AA Contrast Interaction Layout States */
 .navigation li a:hover,
 .navigation li a:focus {
     background-color: #2b042e;
@@ -117,10 +113,10 @@ nav {
     color: var(--text-white);
 }
 
-/* Limited Width Centered Main Framework */
+/* Centered Main Content Area */
 main {
-    max-width: 800px; 
-    margin: 0 auto;  
+    max-width: 800px; /* Horizontally restricted width as required */
+    margin: 0 auto;  /* Centers layout content */
     padding: 1.5rem 1rem;
 }
 
@@ -133,14 +129,13 @@ main h1 {
     font-weight: 600;
 }
 
-/* Single-Column CSS Grid Core for Mobile Layouts */
+/* CSS Grid Container - Exactly 1 Column on Mobile Views */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
-/* Structural Image Elements */
 figure {
     margin: 0;
     background: var(--secondary-bg);
@@ -161,7 +156,6 @@ figcaption {
     color: var(--text-dark);
 }
 
-/* Thematic Footer Component */
 footer {
     background-color: var(--primary-purple);
     color: var(--text-white);
