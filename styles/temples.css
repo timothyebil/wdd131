@@ -1,4 +1,4 @@
-/* WDD 131 - Mobile-First Base Stylesheet */
+/* WDD 131 - Mobile-First Clean Consolidated Stylesheet */
 
 :root {
     --primary-bg: #002d62; 
@@ -24,7 +24,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header Structural Framework */
 header {
     background-color: var(--primary-bg);
     color: var(--text-light);
@@ -43,14 +42,13 @@ header h1 {
     letter-spacing: 0.5px;
 }
 
-/* Explicit CSS Flex applied directly on the nav element */
+/* Flexbox Layout Context applied directly on the nav element */
 nav {
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
-/* Mobile Hamburger Button Setup */
 #menu {
     font-size: 2.2rem;
     background: none;
@@ -75,7 +73,6 @@ nav {
     content: "❌";
 }
 
-/* Mobile Navigation Setup */
 .navigation {
     list-style: none;
     padding: 0;
@@ -105,19 +102,22 @@ nav {
     transition: background-color 0.2s ease;
 }
 
-/* Contrast-Optimized Hover / Interactive States */
+/* Flawless WCAG AA Contrast Layout (Solid Gold Highlight on Dark Blue) */
 .navigation li a:hover,
-.navigation li a:focus,
-.navigation li a.active {
-    background-color: rgba(255, 255, 255, 0.25);
-    color: var(--text-light);
+.navigation li a:focus {
+    background-color: #001f44;
+    color: var(--accent-gold);
     outline: none;
 }
 
-/* Centered Main Layout Frame */
+.navigation li a.active {
+    background-color: #001a3a;
+    color: var(--accent-gold);
+}
+
 main {
-    max-width: 800px; /* Horizontally restricted width as suggested */
-    margin: 0 auto;  /* Centers main element */
+    max-width: 800px;
+    margin: 0 auto;
     padding: 2rem 1.2rem;
 }
 
@@ -129,14 +129,12 @@ main h1 {
     font-size: 1.8rem;
 }
 
-/* CSS Grid with Exactly One Column on Mobile Viewports */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.75rem;
 }
 
-/* Gallery Figure Components */
 figure {
     margin: 0;
     background: var(--card-bg);
@@ -163,7 +161,6 @@ figcaption {
     text-align: center;
 }
 
-/* High Contrast Footer Container */
 footer {
     background-color: var(--primary-bg);
     color: var(--text-light);
