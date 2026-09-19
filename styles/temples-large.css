@@ -1,46 +1,46 @@
 /* WDD 131 - Desktop Layout Responsive Override Style File */
 
-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 3rem;
-}
+@media screen and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 3rem;
+    }
 
-.header-title {
-    margin: 0;
-}
+    .header-title {
+        margin: 0;
+    }
 
-nav {
-    width: auto;
-}
+    nav {
+        width: auto;
+    }
 
-/* Hide responsive menu controls when outside mobile display boundaries */
-#menu {
-    display: none;
-}
+    #menu {
+        display: none;
+    }
 
-.navigation {
-    display: flex;
-    flex-direction: row;
-    border-top: none;
-}
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        border-top: none;
+    }
 
-.navigation li {
-    width: auto;
-}
+    .navigation li {
+        width: auto;
+    }
 
-.navigation li a {
-    padding: 0.5rem 1.25rem;
-    font-size: 1.1rem;
-}
+    .navigation li a {
+        padding: 0.5rem 1.25rem;
+        font-size: 1.1rem;
+    }
 
-/* Multi-Column CSS Grid Expansion utilizing repeat and auto-fit minmax functions */
-main {
-    max-width: 1200px; 
-}
+    main {
+        max-width: 1200px; 
+    }
 
-.grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
 }

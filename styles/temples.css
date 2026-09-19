@@ -40,7 +40,6 @@ header {
     font-weight: 700;
 }
 
-/* Explicit CSS Flexbox Layout rule applied directly to the nav wrapper element */
 nav {
     display: flex;
     width: 100%;
@@ -100,7 +99,6 @@ nav {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Flawless WCAG AA Contrast Highlight Blocks (Solid Dark Overlays) */
 .navigation li a:hover,
 .navigation li a:focus {
     background-color: #2b042e;
@@ -113,7 +111,6 @@ nav {
     color: var(--text-white);
 }
 
-/* Limited Width Centered Main Layout Block */
 main {
     max-width: 800px; 
     margin: 0 auto;  
@@ -129,7 +126,6 @@ main h1 {
     font-weight: 600;
 }
 
-/* Mobile View Layout Configuration - Exactly One Column Grid */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
