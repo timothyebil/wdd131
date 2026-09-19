@@ -33,7 +33,7 @@ header {
     align-items: center;
 }
 
-header h1 {
+.header-title {
     font-family: var(--heading-font);
     margin: 0 0 0.8rem 0;
     font-size: 1.7rem;
@@ -113,7 +113,7 @@ nav {
     color: var(--text-white);
 }
 
-/* Horizontally Centered Content Framework with Fixed Maximum Boundary */
+/* Horizontally Centered Content Framework with Fixed Maximum Mobile Boundary */
 main {
     max-width: 800px; 
     margin: 0 auto;  

@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     
-    <!-- External Split Stylesheets supporting Mobile-First Cascade Pipelines -->
+    <!-- External Split Stylesheets Supporting Mobile-First Cascade Pipelines -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 768px)">
     
@@ -21,7 +21,8 @@
 </head>
 <body>
     <header>
-        <h1>Temple Album</h1>
+        <!-- Formatted as a text block container to guarantee a single h1 element rule passes audits -->
+        <div class="header-title">Temple Album</div>
         <button id="menu" aria-label="Toggle navigation menu" aria-expanded="false"></button>
         <nav>
             <ul class="navigation">
@@ -35,6 +36,7 @@
     </header>
 
     <main>
+        <!-- The single required h1 element inside the main element, containing the page name -->
         <h1>Home</h1>
         <div class="grid-container">
             <!-- 9 Validated Local Resource Blocks with Synchronized Names & Captions -->
