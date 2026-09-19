@@ -1,4 +1,4 @@
-/* WDD 131 - Mobile-First Base Framework Architecture Stylesheet */
+/* WDD 131 - Mobile-First Base Architecture Stylesheet */
 
 :root {
     --primary-purple: #4a0e4e; 
@@ -40,7 +40,7 @@ header h1 {
     font-weight: 700;
 }
 
-/* Explicit Flexbox Layout Engine rule on Nav element */
+/* Explicit CSS Flexbox applied natively on the navigation element wrapper */
 nav {
     display: flex;
     width: 100%;
@@ -100,7 +100,7 @@ nav {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Flawless WCAG AA Contrast Interaction Layout States */
+/* Flawless WCAG AA Compliant High-Contrast Pseudo-States */
 .navigation li a:hover,
 .navigation li a:focus {
     background-color: #2b042e;
@@ -113,10 +113,10 @@ nav {
     color: var(--text-white);
 }
 
-/* Centered Main Content Area */
+/* Horizontally Centered Content Framework with Fixed Maximum Boundary */
 main {
-    max-width: 800px; /* Horizontally restricted width as required */
-    margin: 0 auto;  /* Centers layout content */
+    max-width: 800px; 
+    margin: 0 auto;  
     padding: 1.5rem 1rem;
 }
 
@@ -129,7 +129,7 @@ main h1 {
     font-weight: 600;
 }
 
-/* CSS Grid Container - Exactly 1 Column on Mobile Views */
+/* Single-Column CSS Grid Base Layer optimized for Mobile Displays */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;

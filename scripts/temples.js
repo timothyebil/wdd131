@@ -5,7 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. Dynamic Footer Runtime Values Population
+    // 1. Dynamic Footer Metadata Injections
     const currentYearField = document.querySelector("#currentyear");
     const lastModifiedField = document.querySelector("#lastModified");
     
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         lastModifiedField.textContent = `Last Modification: ${document.lastModified}`;
     }
 
-    // 2. Responsive UI Hamburger Navigation Interactive Toggles
+    // 2. Responsive Hamburger Menu State Tracking Logic
     const menuButton = document.querySelector("#menu");
     const navigationMenu = document.querySelector(".navigation");
 

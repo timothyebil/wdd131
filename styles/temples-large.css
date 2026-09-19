@@ -1,4 +1,4 @@
-/* WDD 131 - Desktop Responsive Adjustments Style Stream File */
+/* WDD 131 - Desktop View Adjustments (Linked via Media Query Boundary) */
 
 header {
     flex-direction: row;
@@ -15,7 +15,7 @@ nav {
     width: auto;
 }
 
-/* Completely dismiss mobile hamburger controls on large viewport states */
+/* Suppress mobile controls on large screens */
 #menu {
     display: none;
 }
@@ -35,9 +35,9 @@ nav {
     font-size: 1.1rem;
 }
 
-/* Multi-Column CSS Grid Generation utilizing repeat and auto-fit */
+/* Grid Restructuring Controls via repeat and auto-fit */
 main {
-    max-width: 1200px; /* Expand maximum boundaries safely on large viewports */
+    max-width: 1200px; /* Expand maximum content area limit smoothly on wider displays */
 }
 
 .grid-container {
