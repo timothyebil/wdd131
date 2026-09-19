@@ -1,4 +1,4 @@
-/* WDD 131 Desktop Refinement Viewport Pipeline Trigger (min-width: 768px) */
+/* WDD 131 - Desktop View Adjustments (Linked via Media Query Boundary) */
 
 header {
     flex-direction: row;
@@ -11,7 +11,11 @@ header h1 {
     margin: 0;
 }
 
-/* Completely dismiss mobile hamburger interfaces */
+nav {
+    width: auto;
+}
+
+/* Hide hamburger controls on desktop screen sizes */
 #menu {
     display: none;
 }
@@ -19,7 +23,6 @@ header h1 {
 .navigation {
     display: flex;
     flex-direction: row;
-    width: auto;
     border-top: none;
 }
 
@@ -29,16 +32,15 @@ header h1 {
 
 .navigation li a {
     padding: 0.6rem 1.4rem;
-    border-radius: 4px;
     font-size: 1rem;
 }
 
-/* Multi-Column CSS Grid Layout Expansion */
+/* Centered Main Area Restructuring into Dynamic Grid Columns */
+main {
+    max-width: 1200px; /* Expands container limit safely for large display widths */
+}
+
 .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.2rem;
-}
-
-main h2 {
-    font-size: 2.2rem;
 }

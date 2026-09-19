@@ -5,7 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. Dynamic Footer Element Content Injection
+    // 1. Dynamic Footer Metadata Population
     const currentYearField = document.querySelector("#currentyear");
     const lastModifiedField = document.querySelector("#lastModified");
     
@@ -17,17 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
         lastModifiedField.textContent = `Last Modification: ${document.lastModified}`;
     }
 
-    // 2. Responsive Hamburger Menu Interface Logic
+    // 2. Responsive Hamburger Navigation Toggle Logic
     const menuButton = document.querySelector("#menu");
     const navigationMenu = document.querySelector(".navigation");
 
     if (menuButton && navigationMenu) {
         menuButton.addEventListener("click", () => {
-            // Toggles CSS visibility rules
             navigationMenu.classList.toggle("open");
             menuButton.classList.toggle("open");
             
-            // Handles accessibility criteria (Updates ARIA tags at runtime)
+            // Updates ARIA expanded state attributes for clean Accessibility metrics
             const isMenuExpanded = navigationMenu.classList.contains("open");
             menuButton.setAttribute("aria-expanded", isMenuExpanded.toString());
         });
