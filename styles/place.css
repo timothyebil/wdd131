@@ -1,8 +1,17 @@
 :root {
-    --primary-green: #007A33;     /* Forest Green heading block background */
-    --accent-crimson: #C8102E;    /* Crimson canvas banner background */
-    --text-dark: #333333;         /* Balanced typography read color */
-    --bg-light: #F4F5F7;          /* Document baseline background */
+    /* Standardized Palette using Hexadecimal Codes */
+    --primary-badge: #007A33;     /* Forest Green accent headings */
+    --accent-crimson: #C8102E;    /* Crimson canvas banner lines */
+    --text-dark: #1A1A1A;         /* Dark gray typography content */
+    --bg-light: #F4F5F7;          /* Soft light canvas background */
+    --pure-white: #FFFFFF;        /* Standard white panel canvas background */
+    --border-gray: #ECEFF1;       /* Light divider stroke gray */
+    --text-muted: #666666;        /* Subtle secondary tag labels text color */
+    
+    /* Alpha-Channel Translucent Panel Standard (Hex values with transparency) */
+    --panel-overlay: #FFFFFFF2;   /* White panel overlay at 95% opacity */
+    --shadow-tint: #00000026;     /* Box shadow drop tint color layer */
+    
     --base-font: 'Arial', sans-serif;
 }
 
@@ -16,10 +25,10 @@ body {
 
 header {
     background-color: var(--accent-crimson);
-    color: #ffffff;
+    color: var(--pure-white);
     padding: 1.8rem;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px var(--shadow-tint);
 }
 
 header h1 {
@@ -29,7 +38,7 @@ header h1 {
     letter-spacing: 1px;
 }
 
-/* Hero container box mapping layout background parameters */
+/* Base Wrapper Matrix Settings */
 .hero-wrapper {
     position: relative;
     width: 100%;
@@ -43,7 +52,7 @@ header h1 {
     object-fit: cover;
 }
 
-/* Card container tracking overlay elements */
+/* Staggered Floating Cards Matrix */
 .content-overlay-container {
     display: flex;
     flex-direction: column;
@@ -53,16 +62,16 @@ header h1 {
 }
 
 section {
-    background: rgba(255, 255, 255, 0.95);
+    background-color: var(--panel-overlay);
     padding: 1.5rem;
     border-radius: 2px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px var(--shadow-tint);
     box-sizing: border-box;
 }
 
 section h2 {
-    background-color: var(--primary-green);
-    color: #ffffff;
+    background-color: var(--primary-badge);
+    color: var(--pure-white);
     margin: -1.5rem -1.5rem 1.5rem -1.5rem;
     padding: 0.8rem 1.8rem;
     font-size: 1.5rem;
@@ -81,7 +90,7 @@ ul li {
     justify-content: space-between;
     margin-bottom: 0.7rem;
     font-size: 1.05rem;
-    border-bottom: 1px dashed #E2E8F0;
+    border-bottom: 1px dashed var(--border-gray);
     padding-bottom: 0.4rem;
 }
 
@@ -90,7 +99,7 @@ ul li:last-child {
 }
 
 ul li span {
-    color: #666666;
+    color: var(--text-muted);
 }
 
 .weather-icon-mobile {
@@ -102,7 +111,7 @@ ul li span {
 
 footer {
     background-color: var(--accent-crimson);
-    color: #ffffff;
+    color: var(--pure-white);
     text-align: center;
     padding: 2.2rem 1rem;
     font-size: 1rem;
@@ -116,9 +125,10 @@ footer p {
 .last-modified {
     font-size: 0.9rem;
     font-weight: bold;
+    color: var(--pure-white);
 }
 
-/* Widescreen Desktop Viewport Absolute Overlay Processing */
+/* Responsive Desktop Optimization Query */
 @media (min-width: 850px) {
     .content-overlay-container {
         position: absolute;
@@ -126,12 +136,11 @@ footer p {
         left: 0;
         width: 100%;
         height: 100%;
-        background: transparent;
-        display: block; /* Break flex properties to handle explicit card absolute positioning */
+        background-color: transparent;
+        display: block;
         padding: 0;
     }
 
-    /* Precisely align the Data card layout matching the left edge layout block */
     .data-card {
         position: absolute;
         top: 8%;
@@ -139,7 +148,6 @@ footer p {
         width: 320px;
     }
 
-    /* Floating Weather layout panel mapping parameters tracking right canvas borders */
     .weather-card {
         position: absolute;
         bottom: 12%;
@@ -151,7 +159,6 @@ footer p {
         display: none;
     }
 
-    /* Render the pseudo-element icon block inline within heading element borders */
     .weather-card h2::after {
         content: " ⛅";
         font-size: 1.4rem;
