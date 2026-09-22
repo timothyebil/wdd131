@@ -1,0 +1,160 @@
+:root {
+    --primary-green: #007A33;     /* Forest Green heading block background */
+    --accent-crimson: #C8102E;    /* Crimson canvas banner background */
+    --text-dark: #333333;         /* Balanced typography read color */
+    --bg-light: #F4F5F7;          /* Document baseline background */
+    --base-font: 'Arial', sans-serif;
+}
+
+body {
+    font-family: var(--base-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+header {
+    background-color: var(--accent-crimson);
+    color: #ffffff;
+    padding: 1.8rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Hero container box mapping layout background parameters */
+.hero-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Card container tracking overlay elements */
+.content-overlay-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--bg-light);
+}
+
+section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 2px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+section h2 {
+    background-color: var(--primary-green);
+    color: #ffffff;
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+    font-size: 1.05rem;
+    border-bottom: 1px dashed #E2E8F0;
+    padding-bottom: 0.4rem;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+ul li span {
+    color: #666666;
+}
+
+.weather-icon-mobile {
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 1rem auto;
+}
+
+footer {
+    background-color: var(--accent-crimson);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.2rem 1rem;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0.6rem 0;
+    letter-spacing: 0.5px;
+}
+
+.last-modified {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Widescreen Desktop Viewport Absolute Overlay Processing */
+@media (min-width: 850px) {
+    .content-overlay-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        display: block; /* Break flex properties to handle explicit card absolute positioning */
+        padding: 0;
+    }
+
+    /* Precisely align the Data card layout matching the left edge layout block */
+    .data-card {
+        position: absolute;
+        top: 8%;
+        left: 3%;
+        width: 320px;
+    }
+
+    /* Floating Weather layout panel mapping parameters tracking right canvas borders */
+    .weather-card {
+        position: absolute;
+        bottom: 12%;
+        right: 3%;
+        width: 280px;
+    }
+
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Render the pseudo-element icon block inline within heading element borders */
+    .weather-card h2::after {
+        content: " ⛅";
+        font-size: 1.4rem;
+        vertical-align: middle;
+    }
+}

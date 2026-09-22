@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W03: Responsive Images Overview - Timothy Ebil</title>
+    <meta name="description" content="W03 Learning Activity demonstrating responsive images with a bottom-left aligned fluid text overlay for WDD 131.">
+    <meta name="author" content="Timothy Ebil">
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+<body>
+    <header>
+        <h1>W03 Learning Activity: Responsive Images</h1>
+        <p>Student: Timothy Ebil</p>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 1000px)">
+                <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+                <img src="images/hero-large.webp" alt="Sacred Temple Architecture" width="1500" height="750">
+            </picture>
+            
+            <!-- Bottom Left Text Overlay Layer -->
+            <div class="hero-overlay">
+                <h2>Welcome to Our Gallery</h2>
+                <p>Exploring Sacred Architecture</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 | Timothy Ebil | WDD 131</p>
+    </footer>
+</body>
+</html>

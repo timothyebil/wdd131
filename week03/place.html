@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Uganda | Country Overview Dashboard</title>
+    <meta name="description" content="Timothy Ebil's WDD 131 country overview dashboard featuring comprehensive statistical data metrics and dynamic wind chill calculations for Uganda.">
+    <meta name="author" content="Timothy Ebil">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Uganda</h1>
+    </header>
+    
+    <!-- Wrapper to handle the full background image layout matching the wireframe -->
+    <main class="hero-wrapper">
+        <picture>
+            <source media="(min-width: 800px)" srcset="images/hero-large.webp">
+            <img src="images/hero-small.jpg" 
+                 alt="Scenic landscape view of Uganda, the Pearl of Africa" 
+                 class="hero-background-image" 
+                 width="1024" 
+                 height="683" 
+                 loading="eager">
+        </picture>
+
+        <!-- Dynamic Staggered Overlay Cards Group -->
+        <div class="content-overlay-container">
+            <section class="data-card">
+                <h2>Data</h2>
+                <ul>
+                    <li><span>Area:</span> <strong>241,038 sq km</strong></li>
+                    <li><span>Population:</span> <strong>49,000,000</strong></li>
+                    <li><span>Capital:</span> <strong>Kampala</strong></li>
+                    <li><span>Languages:</span> <strong>English, Swahili</strong></li>
+                    <li><span>Currency:</span> <strong>Ugandan Shilling (UGX)</strong></li>
+                    <li><span>Time Zone:</span> <strong>UTC+3</strong></li>
+                    <li><span>Calling Code:</span> <strong>+256</strong></li>
+                    <li><span>Internet TLD:</span> <strong>.ug</strong></li>
+                </ul>
+            </section>
+
+            <section class="weather-card">
+                <h2>Weather</h2>
+                <!-- Vector SVG icon used for mobile viewport structures -->
+                <img src="images/weather-icon.svg" alt="Partly cloudy status icon" class="weather-icon-mobile" width="60" height="60">
+                <ul>
+                    <li><span>Temperature:</span> <strong><span id="temp">10</span>°C</strong></li>
+                    <li><span>Conditions:</span> <strong>Partly Cloudy</strong></li>
+                    <li><span>Wind:</span> <strong><span id="wind">5</span> km/h</strong></li>
+                    <li><span>Wind Chill:</span> <strong><span id="windchill"></span></strong></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🏵️ Timothy Ebil 🏵️ Uganda</p>
+        <p class="last-modified">Last Modification: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+</html>

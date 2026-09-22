@@ -1,0 +1,113 @@
+/* --- Base Reset & Typography --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* --- Layout Centering --- */
+header, main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: #1e3d59;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+    margin-top: 20px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0;
+    font-style: italic;
+    color: #ffc107;
+}
+
+/* --- Hero Layout & Positioning --- */
+.hero {
+    position: relative; /* Context reference for the absolute child elements */
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto; /* Maintains clean scaling and asset dimension aspect ratio */
+}
+
+/* --- Bottom Left Corner Overlay Layer --- */
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    /* Flex alignment configured for bottom-left stacking layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    
+    /* Linear gradient shield ensures text remains highly readable over any background */
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+    color: #ffffff;
+    padding: 40px 30px 25px 30px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* --- Fluid Dynamic Typography --- */
+.hero-overlay h2 {
+    font-size: 4vw; /* Font scales naturally based on the device width */
+    margin: 0 0 8px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-overlay p {
+    font-size: 1.8vw; /* Subtitle scales at a proportional rate */
+    margin: 0;
+    color: #ffc107;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    padding: 0;
+}
+
+/* --- Breakpoint Guardrails for Extra Large & Tiny Screens --- */
+@media (min-width: 1200px) {
+    .hero-overlay h2 { font-size: 2.8rem; }
+    .hero-overlay p { font-size: 1.3rem; }
+}
+
+@media (max-width: 500px) {
+    .hero-overlay {
+        padding: 15px; /* Saves real estate inside narrow viewports */
+    }
+    .hero-overlay h2 { font-size: 1.4rem; }
+    .hero-overlay p { font-size: 0.9rem; }
+}
+
+/* --- Footer Formatting --- */
+footer {
+    background-color: #1e3d59;
+    color: #fff;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://w3.org" viewBox="0 0 64 64">
+    <!-- Sun Vector Component -->
+    <circle cx="44" cy="22" r="10" fill="#FFCE00" />
+    <g stroke="#FFCE00" stroke-width="2.5" stroke-linecap="round">
+        <line x1="44" y1="6" x2="44" y2="9" />
+        <line x1="44" y1="35" x2="44" y2="38" />
+        <line x1="28" y1="22" x2="31" y2="22" />
+        <line x1="57" y1="22" x2="60" y2="22" />
+    </g>
+    <!-- Foreground Cloud Grid Map Cover -->
+    <path d="M18 46h26a9 9 0 0 0 2.5-17.5 8.5 8.5 0 0 0-15.5-3A6.5 6.5 0 0 0 14 32a7.5 7.5 0 0 0 4 14z" fill="#E2E8F0" />
+</svg>
