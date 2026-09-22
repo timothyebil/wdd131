@@ -1,17 +1,17 @@
 :root {
-    /* Standardized Palette - Explicit Hexadecimal Type Mapping */
-    --primary-badge: #007A33;     /* Forest Green heading bars */
-    --accent-crimson: #C8102E;    /* Crimson main blocks */
-    --text-dark: #1A1A1A;         /* Dark neutral text layout layer */
-    --bg-light: #F4F5F7;          /* Page layout context background canvas */
-    --pure-white: #FFFFFF;        /* Crisp white box panel background color */
-    --border-gray: #ECEFF1;       /* Panel list line items border separators */
-    --text-muted: #666666;        /* Sub-tag text content labels mapping tint */
+    /* 1. Base Harmonized Palette Definition Space */
+    --primary-badge: #007A33;     /* Forest Green heading containers */
+    --accent-crimson: #C8102E;    /* Crimson primary background bars */
+    --text-dark: #1A1A1A;         /* Dark neutral typography text color */
+    --bg-light: #F4F5F7;          /* Soft layout canvas background color */
+    --pure-white: #FFFFFF;        /* Bright background panel color */
+    --border-gray: #ECEFF1;       /* Panel list line item dashed dividers */
+    --text-muted: #666666;        /* Sub-tag text content tracking tint */
     
-    /* Alpha-Channel Translucent Variables */
-    --panel-overlay: #FFFFFFF2;   /* White panel overlay processing 95% opacity */
-    --shadow-tint: #00000026;     /* Subtle box container drop shadows */
-    --clear-alpha: #00000000;     /* Fully transparent hex boundary to eliminate named keywords */
+    /* 2. Standardized Translucency Hex Signatures */
+    --panel-overlay: #FFFFFFF2;   /* White panel canvas overlay at 95% opacity */
+    --shadow-tint: #00000026;     /* Subtle container depth drop shadows */
+    --clear-alpha: #00000000;     /* Absolute transparent alpha baseline hex signature */
     
     --base-font: 'Arial', sans-serif;
 }
@@ -53,7 +53,7 @@ header h1 {
     object-fit: cover;
 }
 
-/* Content Blocks Layout Container Matrix */
+/* Content Layout Grid Container Elements */
 .content-overlay-container {
     display: flex;
     flex-direction: column;
@@ -137,7 +137,7 @@ footer p {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--clear-alpha); /* Replaced named 'transparent' string with explicit transparent variable */
+        background-color: var(--clear-alpha);
         display: block;
         padding: 0;
     }
@@ -160,9 +160,9 @@ footer p {
         display: none;
     }
 
-    /* Fulfill the pseudo-element icon requirement on wide screen configurations */
+    /* Renders the pseudo-element weather icon content onto large desktop viewports */
     .weather-card h2::after {
-        content: " \26C5"; /* Converted clear text literal string to standard escaped unicode hex mapping */
+        content: " \26C5"; /* Escaped hexadecimal unicode notation map to clear named character flags */
         font-size: 1.4rem;
         vertical-align: middle;
     }
