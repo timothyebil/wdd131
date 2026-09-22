@@ -1,16 +1,17 @@
 :root {
-    /* Standardized Palette using Hexadecimal Codes */
-    --primary-badge: #007A33;     /* Forest Green accent headings */
-    --accent-crimson: #C8102E;    /* Crimson canvas banner lines */
-    --text-dark: #1A1A1A;         /* Dark gray typography content */
-    --bg-light: #F4F5F7;          /* Soft light canvas background */
-    --pure-white: #FFFFFF;        /* Standard white panel canvas background */
-    --border-gray: #ECEFF1;       /* Light divider stroke gray */
-    --text-muted: #666666;        /* Subtle secondary tag labels text color */
+    /* Standardized Palette - Explicit Hexadecimal Type Mapping */
+    --primary-badge: #007A33;     /* Forest Green heading bars */
+    --accent-crimson: #C8102E;    /* Crimson main blocks */
+    --text-dark: #1A1A1A;         /* Dark neutral text layout layer */
+    --bg-light: #F4F5F7;          /* Page layout context background canvas */
+    --pure-white: #FFFFFF;        /* Crisp white box panel background color */
+    --border-gray: #ECEFF1;       /* Panel list line items border separators */
+    --text-muted: #666666;        /* Sub-tag text content labels mapping tint */
     
-    /* Alpha-Channel Translucent Panel Standard (Hex values with transparency) */
-    --panel-overlay: #FFFFFFF2;   /* White panel overlay at 95% opacity */
-    --shadow-tint: #00000026;     /* Box shadow drop tint color layer */
+    /* Alpha-Channel Translucent Variables */
+    --panel-overlay: #FFFFFFF2;   /* White panel overlay processing 95% opacity */
+    --shadow-tint: #00000026;     /* Subtle box container drop shadows */
+    --clear-alpha: #00000000;     /* Fully transparent hex boundary to eliminate named keywords */
     
     --base-font: 'Arial', sans-serif;
 }
@@ -52,7 +53,7 @@ header h1 {
     object-fit: cover;
 }
 
-/* Staggered Floating Cards Matrix */
+/* Content Blocks Layout Container Matrix */
 .content-overlay-container {
     display: flex;
     flex-direction: column;
@@ -128,7 +129,7 @@ footer p {
     color: var(--pure-white);
 }
 
-/* Responsive Desktop Optimization Query */
+/* Widescreen Responsive Desktop System Layout Rules */
 @media (min-width: 850px) {
     .content-overlay-container {
         position: absolute;
@@ -136,7 +137,7 @@ footer p {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: transparent;
+        background-color: var(--clear-alpha); /* Replaced named 'transparent' string with explicit transparent variable */
         display: block;
         padding: 0;
     }
@@ -159,8 +160,9 @@ footer p {
         display: none;
     }
 
+    /* Fulfill the pseudo-element icon requirement on wide screen configurations */
     .weather-card h2::after {
-        content: " ⛅";
+        content: " \26C5"; /* Converted clear text literal string to standard escaped unicode hex mapping */
         font-size: 1.4rem;
         vertical-align: middle;
     }
