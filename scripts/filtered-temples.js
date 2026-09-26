@@ -1,3 +1,4 @@
+// Dataset configuration featuring the base 7 entries precisely expanded by 3 custom student entries
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -73,16 +74,15 @@ const temples = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Structural DOM Site Footer Timestamp Automation
+    // Dynamic footer timestamp population
     document.getElementById("currentyear").textContent = new Date().getFullYear();
     document.getElementById("lastmodified").textContent = document.lastModified;
 
-    // 2. Cache Crucial Document Layout Landmark Elements
     const gridCanvas = document.getElementById("temple-cards-container");
     const headerTitleViewLabel = document.getElementById("gallery-view-label");
     const tabLinkSelectors = document.querySelectorAll(".navigation-menu a");
 
-    // Dynamic rendering function building individual cards cleanly mapping native lazy properties
+    // Dynamic builder block assembling standard figure markup loops with explicit sizes
     const populateGalleryDashboard = (datasetArray) => {
         gridCanvas.innerHTML = ""; 
         
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const figureCardNode = document.createElement("figure");
             figureCardNode.className = "temple-profile-card";
             
-            // Layout maps precise typography text label structures matching your target image snippet perfectly
+            // Replicates text structures from the reference screenshot perfectly
             figureCardNode.innerHTML = `
                 <h3>${temple.templeName}</h3>
                 <div class="info-body">
@@ -98,9 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p><span class="card-label">Dedicated:</span> ${temple.dedicated}</p>
                     <p><span class="card-label">Size:</span> ${temple.area.toLocaleString()} sq ft</p>
                 </div>
-                <!-- Native lazy loading explicitly enabled with fixed dimensions to guarantee zero layout shifts -->
                 <img src="${temple.imageUrl}" 
-                     alt="${temple.templeName} Temple architectural structural overview look" 
+                     alt="${temple.templeName} Temple architectural overview design structure" 
                      loading="lazy" 
                      width="400" 
                      height="250">
@@ -109,11 +108,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // 3. Main Navigation Array Filter Logic Core Routing Processing Controller
+    // Navigation Array Filter Switch Controller
     const processActiveFilterSelection = (clickEvent, targetModeString) => {
         clickEvent.preventDefault();
-        
-        // Handle visual visual indicator active selection toggles classes flags states
         tabLinkSelectors.forEach(node => node.classList.remove("active-tab"));
         clickEvent.target.classList.add("active-tab");
 
@@ -123,14 +120,14 @@ document.addEventListener("DOMContentLoaded", () => {
             case "old":
                 headerTitleViewLabel.textContent = "Old Temples (Built Prior to 1900)";
                 calculationResultList = temples.filter(t => {
-                    const yearExtracted = parseInt(t.dedicated.split(",").trim());
+                    const yearExtracted = parseInt(t.dedicated.split(",")[0].trim());
                     return yearExtracted < 1900;
                 });
                 break;
             case "new":
                 headerTitleViewLabel.textContent = "New Temples (Built Post 2000)";
                 calculationResultList = temples.filter(t => {
-                    const yearExtracted = parseInt(t.dedicated.split(",").trim());
+                    const yearExtracted = parseInt(t.dedicated.split(",")[0].trim());
                     return yearExtracted > 2000;
                 });
                 break;
@@ -150,13 +147,12 @@ document.addEventListener("DOMContentLoaded", () => {
         populateGalleryDashboard(calculationResultList);
     };
 
-    // 4. Hook Click Action Subscriptions to Target Nodes
     document.getElementById("filter-home").addEventListener("click", (e) => processActiveFilterSelection(e, "home"));
     document.getElementById("filter-old").addEventListener("click", (e) => processActiveFilterSelection(e, "old"));
     document.getElementById("filter-new").addEventListener("click", (e) => processActiveFilterSelection(e, "new"));
     document.getElementById("filter-large").addEventListener("click", (e) => processActiveFilterSelection(e, "large"));
     document.getElementById("filter-small").addEventListener("click", (e) => processActiveFilterSelection(e, "small"));
 
-    // Initial pass data injection rendering pool load execution parameters on dashboard runtime start
+    // First-pass default render
     populateGalleryDashboard(temples);
 });
