@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Picture Album | Dynamic Portfolio Filters</title>
+    <meta name="description" content="Timothy Ebil's W04 Assignment: Enhanced temple picture album gallery dashboard processing responsive grid structures, card content filtering arrays, and native content lazy loading.">
+    <meta name="author" content="Timothy Ebil">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Gallery Explorer</h1>
+        <nav>
+            <ul class="navigation-menu">
+                <li><a href="#" id="filter-home" class="active-tab">Home</a></li>
+                <li><a href="#" id="filter-old">Old</a></li>
+                <li><a href="#" id="filter-new">New</a></li>
+                <li><a href="#" id="filter-large">Large</a></li>
+                <li><a href="#" id="filter-small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2 id="gallery-view-label">All Temples</h2>
+        <!-- Targeted JavaScript runtime rendering canvas insertion element -->
+        <div class="temple-grid-canvas" id="temple-cards-container"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Timothy Ebil | Course Album Project Portfolio</p>
+        <p class="modification-tracker">Last Modified: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+</html>
