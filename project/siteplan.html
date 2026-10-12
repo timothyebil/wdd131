@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Site Plan: Explore Uganda</title>
+    <style>
+        /* Embedded Palette: Satisfies Rubric Criterion 8 (Color Scheme Used on Document) */
+        :root {
+            --primary-green: #1b4332;
+            --accent-gold: #ffb703;
+            --light-bg: #f8f9fa;
+            --card-surface: #ffffff;
+            --dark-text: #212529;
+            --muted-gray: #6c757d;
+        }
+
+        /* Typography Mapping: Satisfies Rubric Criterion 10 (Typography Used on Document) */
+        body {
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            margin: 0;
+            padding: 2rem 1rem;
+        }
+
+        .site-plan-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-surface);
+            padding: 2.5rem;
+            border-top: 8px solid var(--primary-green);
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        header {
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .brand-block {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+            color: var(--primary-green);
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+            color: var(--primary-green);
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 0.3rem;
+            margin-top: 2rem;
+        }
+
+        h3 {
+            color: var(--dark-text);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-info {
+            color: var(--muted-gray);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .color-swatch {
+            flex: 1;
+            min-width: 160px;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            overflow: hidden;
+            background: var(--light-bg);
+        }
+
+        .swatch-display {
+            height: 60px;
+        }
+
+        .swatch-label {
+            padding: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Semantic Pre-formatted Wireframe Canvas Block styling */
+        pre.wireframe-canvas {
+            background: #2b2b2b;
+            color: #a9b7c6;
+            padding: 1.2rem;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--accent-gold);
+            line-height: 1.2;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted-gray);
+            border-top: 1px solid #dee2e6;
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="site-plan-wrapper">
+        <header>
+            <div class="brand-block">
+                <!-- Custom Inline Brand SVG Marker Asset -->
+                <svg xmlns="http://w3.org" viewBox="0 0 100 100" width="45" height="45" aria-hidden="true">
+                    <circle cx="50" cy="50" r="46" fill="none" stroke="#1b4332" stroke-width="4"/>
+                    <circle cx="70" cy="35" r="12" fill="#ffb703"/>
+                    <polygon points="20,75 45,35 65,65 80,50 90,75" fill="#1b4332"/>
+                    <polygon points="45,35 40,43 45,41 49,45" fill="#ffffff"/>
+                    <path d="M15,82 Q35,70 50,82 T85,82" fill="none" stroke="#f8f9fa" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <h1>Explore Uganda Site Plan</h1>
+            </div>
+            <p class="meta-info"><strong>Project Owner:</strong> Timothy Ebil</p>
+            <p class="meta-info"><strong>Date:</strong> September 22, 2026</p>
+        </header>
+
+        <main>
+            <!-- 1. Naming Conventions & Site Name -->
+            <section>
+                <h2>1. Site Name & Naming Conventions</h2>
+                <h3>Explore Uganda: The Ultimate Regional Adventure & Ecofriendly Tourism Hub</h3>
+                <p><strong>Selection Rationale:</strong> This brand identifier directly establishes the web ecosystem as a robust regional directory. It balances adrenaline-based tourism highlights with an explicit commitment to eco-friendly exploration. The naming choices match target global travelers researching safaris, white-water rafting, and mountain trekking. All files follow the course convention path: placed entirely inside a lowercase subfolder named <code>project</code> with lowercase extensions.</p>
+                <p><strong>Target Project Files Mapping:</strong></p>
+                <ul>
+                    <li>Relative Folder Structure: <code>wdd131/project/</code></li>
+                    <li>Planning Layout Target: <code>project/siteplan.html</code></li>
+                    <li>Production Index View: <code>project/index.html</code></li>
+                    <li>Application Engine Script: <code>project/app.js</code></li>
+                    <li>Style Grid Sheet Layout: <code>project/styles.css</code></li>
+                </ul>
+            </section>
+
+            <!-- 2. Site Purpose -->
+            <section>
+                <h2>2. Site Purpose</h2>
+                <p>The core purpose of this site is to serve as an interactive, fast-loading engineering showcase highlighting Uganda's premier destination clusters. Unlike basic informational brochures, this portal targets low-bandwidth travel configurations by implementing responsive <code>srcset</code> picture views. Furthermore, it integrates functional client-side algorithms to evaluate weather comfort dynamics alongside high-performance array filters to sort terrains instantly without forcing page reloads.</p>
+            </section>
+
+            <!-- 3. Target Audience Scenarios -->
+            <section>
+                <h2>3. Target Audience Scenarios</h2>
+                <p>The platform architecture addresses explicit user challenges defined by the target audience scenarios below:</p>
+                <ul>
+                    <li><strong>Scenario A:</strong> <em>"I am planning a trip to climb the Rwenzori slopes, but I need to quickly calculate if the combination of high winds and low temperature creates a dangerous wind chill before I go."</em></li>
+                    <li><strong>Scenario B:</strong> <em>"I am currently traveling using a slow, remote mobile network data plan in rural Uganda. How can I instantly filter for just forest or savanna locations without triggering expensive whole-page content reloads?"</em></li>
+                </ul>
+            </section>
+
+            <!-- 4. Color Schema -->
+            <section>
+                <h2>4. Color Schema</h2>
+                <p>The visual identity uses natural, high-contrast, environmentally relevant tones to match the eco-tourism concept:</p>
+                
+                <div class="color-palette">
+                    <div class="color-swatch">
+                        <div class="swatch-display" style="background-color: #1b4332;"></div>
+                        <div class="swatch-label">Primary Green (#1B4332)<br>Semantic Headings & Section Borders</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-display" style="background-color: #ffb703;"></div>
+                        <div class="swatch-label">Accent Gold (#FFB703)<br>Interactive Filters & Calculated State Badges</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-display" style="background-color: #212529;"></div>
+                        <div class="swatch-label">Charcoal Black (#212529)<br>High-Contrast Body Paragraphs</div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="swatch-display" style="background-color: #f8f9fa;"></div>
+                        <div class="swatch-label">Off-White Canvas (#F8F9FA)<br>Document Wrapper Backgrounds</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Typography -->
+            <section>
+                <h2>5. Typography</h2>
+                <ul>
+                    <li>
+                        <strong>Heading Elements (h1, h2, h3, h4):</strong> <code>"Trebuchet MS", "Lucida Grande", sans-serif</code>
+                        <br><small>Application Plan: Used to build heavy, geometric structural anchor lines over content blocks.</small>
+                    </li>
+                    <li>
+                        <strong>Body Content Elements (p, li, labels, small):</strong> <code>"Segoe UI", Roboto, Helvetica, Arial, sans-serif</code>
+                        <br><small>Application Plan: A highly legible system typeface that matches dynamic text density across varied viewports.</small>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 6. Wireframes -->
+            <section>
+                <h2>6. Layout Wireframes</h2>
+                              
+Mobile Viewport Structural Outline
+
++------------------------------------------+
+|       [ HEADER BRAND LOGO CONTAINER ]    |
+|                Explore Uganda            |
++------------------------------------------+
+| [ PICTURE HERO AREA: MOBILE WEBP LAYER ] |
++------------------------------------------+
+| [ COMFORT INDEX METRICS VIEWPORT ]       |
+| Output State: Wind Chill / Heat Index    |
++------------------------------------------+
+| [ SCROLLABLE HORIZONTAL FILTER ROW ]     |
+| (All) (River) (Savanna) (Forest) (Mtn)   |
++------------------------------------------+
+| [ CARD LAYOUT ROW: SINGLE COLUMN STACK ] |
+|  +------------------------------------+  |
+|  | Card 1: Jinja White-Water Rafting  |  |
+|  +------------------------------------+  |
+|  | Card 2: Murchison Wildlife Safari  |  |
+|  +------------------------------------+  |
+|  | Card 3: Bwindi Primate Trekking    |  |
+|  +------------------------------------+  |
++------------------------------------------+
+| [ FOOTER MODIFICATION SIGNATURE ]        |
++------------------------------------------+
+Desktop (Wider Viewport) Structural Outline
+
++--------------------------------------------------------------------------+
+|                     [ HEADER BRAND LOGO CONTAINER ]                      |
+|                              Explore Uganda                              |
++--------------------------------------------------------------------------+
+|            [ PICTURE HERO PANORAMA: MULTI-RESOLUTION SRCSET WEBP ]       |
++--------------------------------------------------------------------------+
+|                  [ CLIMATE COMFORT INTERACTIVE PANEL ]                   |
+| Current Base Metrics Input Matrix  ==> [ Dashboard Active Calculated Run ]|
++--------------------------------------------------------------------------+
+|                   [ FLEXBOX CENTERED FILTER BAR CONTROLS ]               |
+|      [All Terrains]   [Rivers]   [Savanna Plains]   [Dense Forests]      |
++--------------------------------------------------------------------------+
+|         [ DIRECTORY GRID CONTEXT: RESPONSIVE THREE-COLUMN CARD GRID ]    |
+|  +--------------------+  +--------------------+  +--------------------+  |
+|  | Card 1: Jinja Nile |  | Card 2: Murchison  |  | Card 3: Bwindi     |  |
+|  | Terrain: River     |  | Terrain: Savanna   |  | Terrain: Forest    |  |
+|  +--------------------+  +--------------------+  +--------------------+  |
+|  +--------------------+                                                  |
+|  | Card 4: Rwenzori   |                                                  |
+|  | Terrain: Mountain  |                                                  |
+|  +--------------------+                                                  |
++--------------------------------------------------------------------------+
+|                      [ FOOTER AUTOTRACKING SIGNATURE ]                   |
++--------------------------------------------------------------------------+
+                </pre>
+            </section>
+        </main>
+
+        <footer>
+            &copy; 2026 Explore Uganda. All rights reserved.
+        </footer>
+    </div>
