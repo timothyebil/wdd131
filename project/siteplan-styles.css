@@ -1,0 +1,129 @@
+/* Color Palette Specifications */
+:root {
+    --primary-green: #1b4332;
+    --accent-gold: #ffb703;
+    --light-bg: #f8f9fa;
+    --card-surface: #ffffff;
+    --dark-text: #212529;
+    --muted-gray: #6c757d;
+}
+
+/* Base Body System Mapping */
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 2rem 1rem;
+}
+
+.site-plan-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--card-surface);
+    padding: 2.5rem;
+    border-top: 8px solid var(--primary-green);
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+header {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.brand-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1 {
+    font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+    color: var(--primary-green);
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+    color: var(--primary-green);
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    color: var(--dark-text);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.meta-info {
+    color: var(--muted-gray);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Color Guide Swatches */
+.color-palette {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+}
+
+.color-swatch {
+    flex: 1;
+    min-width: 160px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--light-bg);
+}
+
+.swatch-display {
+    height: 60px;
+}
+
+.swatch-label {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Wireframe Containers */
+pre.wireframe-canvas {
+    background: #2b2b2b;
+    color: #a9b7c6;
+    padding: 1.2rem;
+    overflow-x: auto;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--accent-gold);
+    line-height: 1.2;
+}
+
+footer {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--muted-gray);
+    border-top: 1px solid #dee2e6;
+    padding-top: 1.5rem;
+}
