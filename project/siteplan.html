@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Site Plan: Explore Uganda</title>
-    <meta name="description" content="Comprehensive site plan document outlining the design, typography, structure, color schema, and targeted user scenarios for the Explore Uganda ecotourism platform project.">
+    <meta name="description" content="Site plan mapping the typography, color schema, and mobile-to-desktop wireframe layouts for the Explore Uganda ecotourism platform project.">
     <meta name="author" content="Timothy Ebil">
-    <!-- Link to the clean external stylesheet, removing all internal style blocks -->
     <link rel="stylesheet" href="siteplan-styles.css">
 </head>
 <body>
@@ -14,13 +13,12 @@
     <div class="site-plan-wrapper">
         <header>
             <div class="brand-block">
-                <!-- Custom Inline Brand SVG Marker Asset -->
                 <svg xmlns="http://w3.org" viewBox="0 0 100 100" width="45" height="45" aria-hidden="true">
-                    <circle cx="50" cy="50" r="46" fill="none" stroke="#1b4332" stroke-width="4"/>
-                    <circle cx="70" cy="35" r="12" fill="#ffb703"/>
-                    <polygon points="20,75 45,35 65,65 80,50 90,75" fill="#1b4332"/>
-                    <polygon points="45,35 40,43 45,41 49,45" fill="#ffffff"/>
-                    <path d="M15,82 Q35,70 50,82 T85,82" fill="none" stroke="#f8f9fa" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="50" cy="50" r="46" class="svg-circle-bg"/>
+                    <circle cx="70" cy="35" r="12" class="svg-sun"/>
+                    <polygon points="20,75 45,35 65,65 80,50 90,75" class="svg-mountain"/>
+                    <polygon points="45,35 40,43 45,41 49,45" class="svg-snow-cap"/>
+                    <path d="M15,82 Q35,70 50,82 T85,82" class="svg-river"/>
                 </svg>
                 <h1>Explore Uganda Site Plan</h1>
             </div>
@@ -29,10 +27,9 @@
         </header>
 
         <main>
-            <!-- 1. Naming Conventions & Site Name -->
             <section>
-                <h2>1. Site Name & Naming Conventions</h2>
-                <h3>Explore Uganda: The Ultimate Regional Adventure & Ecofriendly Tourism Hub</h3>
+                <h2>1. Site Name &amp; Naming Conventions</h2>
+                <h3>Explore Uganda: The Ultimate Regional Adventure &amp; Ecofriendly Tourism Hub</h3>
                 <p><strong>Selection Rationale:</strong> This brand identifier directly establishes the web ecosystem as a robust regional directory. It balances adrenaline-based tourism highlights with an explicit commitment to eco-friendly exploration. All files follow the course convention path: placed entirely inside a lowercase subfolder named <code>project</code> with lowercase extensions.</p>
                 <p><strong>Target Project Files Mapping:</strong></p>
                 <ul>
@@ -44,13 +41,11 @@
                 </ul>
             </section>
 
-            <!-- 2. Site Purpose -->
             <section>
                 <h2>2. Site Purpose</h2>
                 <p>The core purpose of this site is to serve as an interactive, fast-loading engineering showcase highlighting Uganda's premier destination clusters. Unlike basic informational brochures, this portal targets low-bandwidth travel configurations by implementing responsive <code>srcset</code> picture views. Furthermore, it integrates functional client-side algorithms to evaluate weather comfort dynamics alongside high-performance array filters to sort terrains instantly without forcing page reloads.</p>
             </section>
 
-            <!-- 3. Target Audience Scenarios -->
             <section>
                 <h2>3. Target Audience Scenarios</h2>
                 <p>The platform architecture addresses explicit user challenges defined by the target audience scenarios below:</p>
@@ -60,32 +55,30 @@
                 </ul>
             </section>
 
-            <!-- 4. Color Schema -->
             <section>
                 <h2>4. Color Schema</h2>
                 <p>The visual identity uses natural, high-contrast, environmentally relevant tones to match the eco-tourism concept:</p>
                 
                 <div class="color-palette">
                     <div class="color-swatch">
-                        <div class="swatch-display" style="background-color: #1b4332;"></div>
-                        <div class="swatch-label">Primary Green (#1B4332)<br>Semantic Headings & Section Borders</div>
+                        <div class="swatch-display primary-green-bg"></div>
+                        <div class="swatch-label">Primary Green (#1B4332)<br>Semantic Headings &amp; Section Borders</div>
                     </div>
                     <div class="color-swatch">
-                        <div class="swatch-display" style="background-color: #ffb703;"></div>
-                        <div class="swatch-label">Accent Gold (#FFB703)<br>Interactive Filters & Calculated State Badges</div>
+                        <div class="swatch-display accent-gold-bg"></div>
+                        <div class="swatch-label">Accent Gold (#FFB703)<br>Interactive Filters &amp; Calculated State Badges</div>
                     </div>
                     <div class="color-swatch">
-                        <div class="swatch-display" style="background-color: #212529;"></div>
+                        <div class="swatch-display charcoal-black-bg"></div>
                         <div class="swatch-label">Charcoal Black (#212529)<br>High-Contrast Body Paragraphs</div>
                     </div>
                     <div class="color-swatch">
-                        <div class="swatch-display" style="background-color: #f8f9fa;"></div>
+                        <div class="swatch-display off-white-bg"></div>
                         <div class="swatch-label">Off-White Canvas (#F8F9FA)<br>Document Wrapper Backgrounds</div>
                     </div>
                 </div>
             </section>
 
-            <!-- 5. Typography -->
             <section>
                 <h2>5. Typography</h2>
                 <ul>
@@ -100,7 +93,6 @@
                 </ul>
             </section>
 
-            <!-- 6. Wireframes -->
             <section>
                 <h2>6. Layout Wireframes</h2>
                 
@@ -174,3 +166,9 @@
         </main>
 
         <footer>
+            <p>&copy; <span id="footer-year">2026</span> Course Site Plan Framework | Timothy Ebil | Project Folder View</p>
+        </footer>
+    </div>
+
+</body>
+</html>
