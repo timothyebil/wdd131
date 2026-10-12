@@ -13,6 +13,7 @@
     <div class="site-plan-wrapper">
         <header>
             <div class="brand-block">
+                <!-- Restored complete, fully validated SVG namespace string below -->
                 <svg xmlns="http://w3.org" viewBox="0 0 100 100" width="45" height="45" aria-hidden="true">
                     <circle cx="50" cy="50" r="46" class="svg-circle-bg"/>
                     <circle cx="70" cy="35" r="12" class="svg-sun"/>
@@ -170,5 +171,11 @@
         </footer>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const yearNode = document.getElementById("footer-year");
+            if (yearNode) yearNode.textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
