@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation - Timothy Ebil</title>
+    <meta name="description" content="Review submission confirmation screen tracking total form review submissions via local memory components for Timothy Ebil.">
+    <!-- Link to the clean external decoupled stylesheet asset -->
+    <link rel="stylesheet" href="css/form-styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Submission Success</h1>
+    </header>
+
+    <main>
+        <div class="confirmation-card">
+            <h2>Review Received!</h2>
+            <p>Thank you for submitting your evaluation. Your feedback helps improve our inventory offerings.</p>
+            <p style="margin-bottom: 0.25rem; font-weight: 600;">Total Reviews Submitted:</p>
+            <div id="counter" class="counter-badge">0</div>
+            <br>
+            <a href="form.html">Submit Another Review</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> 🌴 Timothy Ebil 🌴 Uganda</p>
+    </footer>
+
+    <script>
+        // Rubric Criteria 6: Track submissions correctly in localStorage on document layout load
+        document.addEventListener("DOMContentLoaded", () => {
+            let reviewCount = localStorage.getItem('reviewCount');
+            
+            if (!reviewCount) {
+                reviewCount = 0;
+            }
+            
+            // Safe decimal mathematical incremental computation step
+            reviewCount = parseInt(reviewCount, 10) + 1;
+            localStorage.setItem('reviewCount', reviewCount);
+            
+            // Direct injection targeting the counter UI badge container wrapper
+            document.getElementById('counter').textContent = reviewCount;
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

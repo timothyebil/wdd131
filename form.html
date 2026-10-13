@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W05 Assignment: Product Review Form - Timothy Ebil</title>
+    <meta name="description" content="Product Review Form for WDD131 W05 assignment by Timothy Ebil featuring responsive layouts, dynamic product option rendering, and standardized accessible interfaces.">
+    <!-- Link to the clean external decoupled stylesheet asset -->
+    <link rel="stylesheet" href="css/form-styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+
+    <main>
+        <form action="review.html" method="get">
+            <!-- Product Name Dropdown Field Container -->
+            <div class="form-group">
+                <label for="product-name" class="required">Product Name</label>
+                <select id="product-name" name="productName" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+
+            <!-- Overall Rating Radio Selection Field Container -->
+            <div class="form-group">
+                <span class="field-label required">Overall Rating</span>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <label for="rate-1">☆</label>
+                        <input type="radio" id="rate-1" name="overallRating" value="1" required aria-label="1 Star out of 5">
+                    </div>
+                    <div class="radio-item">
+                        <label for="rate-2">☆☆</label>
+                        <input type="radio" id="rate-2" name="overallRating" value="2" required aria-label="2 Stars out of 5">
+                    </div>
+                    <div class="radio-item">
+                        <label for="rate-3">☆☆☆</label>
+                        <input type="radio" id="rate-3" name="overallRating" value="3" required aria-label="3 Stars out of 5">
+                    </div>
+                    <div class="radio-item">
+                        <label for="rate-4">☆☆☆☆</label>
+                        <input type="radio" id="rate-4" name="overallRating" value="4" required aria-label="4 Stars out of 5">
+                    </div>
+                    <div class="radio-item">
+                        <label for="rate-5">☆☆☆☆☆</label>
+                        <input type="radio" id="rate-5" name="overallRating" value="5" required aria-label="5 Stars out of 5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Installation Date Field Container -->
+            <div class="form-group">
+                <label for="date-installation" class="required">Date of Installation</label>
+                <input type="date" id="date-installation" name="dateInstallation" required>
+            </div>
+
+            <!-- Useful Features Checkboxes Container -->
+            <div class="form-group">
+                <span class="field-label">Which features did you find useful? <span class="optional">(Check all that apply)</span></span>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-durability" name="features" value="durability">
+                        <label for="feature-durability">Durability</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-ui" name="features" value="ease-of-use">
+                        <label for="feature-ui">Ease of Use</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-performance" name="features" value="performance">
+                        <label for="feature-performance">Performance</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-design" name="features" value="design">
+                        <label for="feature-design">Design</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Optional Written Review Textarea Container -->
+            <div class="form-group">
+                <label for="written-review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="written-review" name="writtenReview" placeholder="Share your experience with the product..."></textarea>
+            </div>
+
+            <!-- Optional User Name Input Container -->
+            <div class="form-group">
+                <label for="user-name">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="user-name" name="userName" placeholder="e.g. Timothy Ebil">
+            </div>
+
+            <!-- Form Submission Action Button -->
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> 🌴 Timothy Ebil 🌴 Uganda | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <!-- Link to the clean decoupled function module script -->
+    <script src="js/review-logic.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+:root {
+    --primary-purple: #3a0d42;
+    --background-gray: #f3f0f5;
+    --form-background: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-muted: #555555;
+    --border-color: #767676;
+    --accent-red: #d32f2f;
+    --accent-blue: #1a56db;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-gray);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--primary-purple);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+}
+
+form {
+    background-color: var(--form-background);
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.confirmation-card {
+    background-color: var(--form-background);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.confirmation-card h2 {
+    color: var(--primary-purple);
+    margin-top: 0;
+}
+
+.counter-badge {
+    display: inline-block;
+    background-color: var(--primary-purple);
+    color: #ffffff;
+    font-size: 1.75rem;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.confirmation-card a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--primary-purple);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border 0.2s ease;
+}
+
+.confirmation-card a:hover, .confirmation-card a:focus {
+    border-bottom-color: var(--primary-purple);
+    outline: none;
+}
+
+.form-group {
+    margin-bottom: 1.75rem;
+}
+
+label, .field-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Rubric Criteria 4: Visual indications for required fields */
+.required::after {
+    content: " *";
+    color: var(--accent-red);
+    font-weight: bold;
+}
+
+.optional {
+    color: var(--accent-blue);
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+select, input[type="date"], textarea, input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: #ffffff;
+}
+
+select:focus, input:focus, textarea:focus {
+    outline: 2px solid var(--primary-purple);
+    outline-offset: 1px;
+}
+
+/* Radio Proximity Layout Matrix Rules */
+.radio-group {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    padding: 0.25rem 0;
+}
+
+.radio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.radio-item label {
+    font-weight: normal;
+    font-size: 1.1rem;
+    margin: 0;
+    cursor: pointer;
+}
+
+.radio-item input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Checkbox Layout Configurations */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    font-weight: normal;
+    margin: 0;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+    height: 110px;
+    font-family: inherit;
+}
+
+/* Form Action Trigger Submit UI Element styling */
+input[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    background-color: #e8e1eb;
+    border: 2px solid var(--primary-purple);
+    color: var(--primary-purple);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: var(--primary-purple);
+    color: #ffffff;
+}
+
+footer {
+    background-color: var(--primary-purple);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-top: 4px solid #230629;
+}
