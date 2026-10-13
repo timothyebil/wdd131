@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Expedition | Explore Uganda</title>
+    <meta name="description" content="Register your group and monitor device booking telemetry for custom regional eco-safaris across Uganda.">
+    <meta name="author" content="Timothy Ebil">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/project.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="brand-block">
+            <svg xmlns="http://w3.org" viewBox="0 0 100 100" width="40" height="40" aria-hidden="true">
+                <circle cx="50" cy="50" r="46" fill="none" stroke="#1b4332" stroke-width="4"/>
+                <circle cx="70" cy="35" r="12" fill="#ffb703"/>
+                <polygon points="20,75 45,35 65,65 80,50 90,75" fill="#1b4332"/>
+                <polygon points="45,35 40,43 45,41 49,45" fill="#ffffff"/>
+                <path d="M15,82 Q35,70 50,82 T85,82" fill="none" stroke="#f8f9fa" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <h1>Explore Uganda</h1>
+        </div>
+        <nav class="main-nav" aria-label="Primary Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="contact.html" class="active">Book Expedition</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Plan Your Next Expedition Loop</h2>
+        
+        <form method="get" action="contact.html" class="booking-form" id="safari-booking-form">
+            <div class="form-field">
+                <label for="explorer-name">Explorer Full Name</label>
+                <input type="text" id="explorer-name" name="explorerName" required placeholder="e.g., Timothy Ebil">
+            </div>
+
+            <div class="form-field">
+                <label for="target-safari">Select Adventure Track</label>
+                <select id="target-safari" name="targetSafari" required>
+                    <option value="" disabled selected>Choose an active circuit...</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label for="travel-date">Target Departure Date</label>
+                <input type="date" id="travel-date" name="travelDate" required>
+            </div>
+
+            <div class="form-field">
+                <label for="special-notes">Special Field Requirements (Optional)</label>
+                <textarea id="special-notes" name="specialNotes" rows="4" placeholder="List any gear preferences, dietary updates, or high-altitude concerns..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Register Expedition Track</button>
+            
+            <!-- LocalStorage Counter Display Hook -->
+            <div id="booking-counter-box" class="counter-alert-panel"></div>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Explore Uganda Portal | Timothy Ebil | <a href="references.html">References Page</a></p>
+        <p><small>Document Last Modified: <span id="last-modified"></span></small></p>
+    </footer>
+
+</body>
+</html>

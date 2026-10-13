@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Directory | Explore Uganda</title>
+    <meta name="description" content="Dynamically filter and explore distinct Ugandan savanna safaris, white-water river channels, and glacial mountaineering peaks.">
+    <meta name="author" content="Timothy Ebil">
+    <link rel="stylesheet" href="styles.css">
+    <script src="js/project.js" defer></script>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="brand-block">
+            <svg xmlns="http://w3.org" viewBox="0 0 100 100" width="40" height="40" aria-hidden="true">
+                <circle cx="50" cy="50" r="46" fill="none" stroke="#1b4332" stroke-width="4"/>
+                <circle cx="70" cy="35" r="12" fill="#ffb703"/>
+                <polygon points="20,75 45,35 65,65 80,50 90,75" fill="#1b4332"/>
+                <polygon points="45,35 40,43 45,41 49,45" fill="#ffffff"/>
+                <path d="M15,82 Q35,70 50,82 T85,82" fill="none" stroke="#f8f9fa" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <h1>Explore Uganda</h1>
+        </div>
+        <nav class="main-nav" aria-label="Primary Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html" class="active">Attractions</a></li>
+                <li><a href="contact.html">Book Expedition</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Regional Attractions Directory</h2>
+        
+        <!-- Memory-Optimized Event Delegation Button Track -->
+        <nav class="filter-menu" id="filter-controls" aria-label="Attraction terrain filtering controls">
+            <button class="filter-btn active" data-terrain="all">All Horizons</button>
+            <button class="filter-btn" data-terrain="river">River Rapids</button>
+            <button class="filter-btn" data-terrain="savanna">Savanna Plains</button>
+            <button class="filter-btn" data-terrain="forest">Misty Forests</button>
+            <button class="filter-btn" data-terrain="mountain">Alpine Ridges</button>
+        </nav>
+
+        <!-- Dynamic Asset Grid Card Destination Container -->
+        <section class="directory-grid" id="attractions-grid">
+            <!-- Generated Dynamically via JS map array codes -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Explore Uganda Portal | Timothy Ebil | <a href="references.html">References Page</a></p>
+        <p><small>Document Last Modified: <span id="last-modified"></span></small></p>
+    </footer>
+
+</body>
+</html>
