@@ -7,6 +7,7 @@
     --border-color: #767676;
     --accent-red: #d32f2f;
     --accent-blue: #1a56db;
+    --shadow-tint: #000000;
 }
 
 body {
@@ -22,7 +23,7 @@ body {
 
 header {
     background-color: var(--primary-purple);
-    color: #ffffff;
+    color: var(--form-background);
     text-align: center;
     padding: 1.5rem 1rem;
 }
@@ -47,7 +48,7 @@ form, .confirmation-card {
     max-width: 500px;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px var(--shadow-tint);
     box-sizing: border-box;
 }
 
@@ -64,7 +65,7 @@ form, .confirmation-card {
 .counter-badge {
     display: inline-block;
     background-color: var(--primary-purple);
-    color: #ffffff;
+    color: var(--form-background);
     font-size: 1.75rem;
     padding: 0.5rem 2rem;
     border-radius: 30px;
@@ -118,7 +119,7 @@ select, input[type="date"], textarea, input[type="text"] {
     box-sizing: border-box;
     font-size: 1rem;
     color: var(--text-dark);
-    background-color: #ffffff;
+    background-color: var(--form-background);
 }
 
 select:focus, input:focus, textarea:focus {
@@ -189,7 +190,7 @@ textarea {
 input[type="submit"] {
     width: 100%;
     padding: 1rem;
-    background-color: #f3f0f5;
+    background-color: var(--background-gray);
     border: 2px solid var(--primary-purple);
     color: var(--primary-purple);
     font-size: 1.1rem;
@@ -201,20 +202,19 @@ input[type="submit"] {
 
 input[type="submit"]:hover, input[type="submit"]:focus {
     background-color: var(--primary-purple);
-    color: #ffffff;
+    color: var(--form-background);
 }
 
 footer {
     background-color: var(--primary-purple);
-    color: #ffffff;
+    color: var(--form-background);
     text-align: center;
     padding: 1.5rem 1rem;
     font-size: 0.95rem;
     line-height: 1.6;
-    border-top: 4px solid #230629;
+    border-top: 4px solid var(--primary-purple);
 }
 
-/* Media Query Rules to fulfill layout standards and responsive audit requirements */
 @media (min-width: 768px) {
     main {
         padding: 3rem 1rem;

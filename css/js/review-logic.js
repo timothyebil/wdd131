@@ -1,4 +1,3 @@
-// Array source definitions for target selection blocks
 const products = [
     { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
     { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -10,7 +9,6 @@ const products = [
 document.addEventListener("DOMContentLoaded", () => {
     const selectElement = document.getElementById('product-name');
     
-    // Safety block to ensure element selection behaves correctly
     if (selectElement) {
         products.forEach(product => {
             const option = document.createElement('option');
@@ -20,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Capture dynamic metric targets for footer year and modification tracking
     const yearSpan = document.getElementById('year');
     const lastModifiedSpan = document.getElementById('lastModified');
 
