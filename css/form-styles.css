@@ -38,28 +38,22 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
 }
 
-form {
+form, .confirmation-card {
     background-color: var(--form-background);
     width: 100%;
     max-width: 500px;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
 }
 
 .confirmation-card {
-    background-color: var(--form-background);
-    padding: 2.5rem 2rem;
-    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     max-width: 400px;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .confirmation-card h2 {
@@ -94,7 +88,7 @@ form {
 }
 
 .form-group {
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
 }
 
 label, .field-label {
@@ -104,7 +98,6 @@ label, .field-label {
     font-size: 1rem;
 }
 
-/* Rubric Criteria 4: Visual indications for required fields */
 .required::after {
     content: " *";
     color: var(--accent-red);
@@ -133,10 +126,9 @@ select:focus, input:focus, textarea:focus {
     outline-offset: 1px;
 }
 
-/* Radio Proximity Layout Matrix Rules */
 .radio-group {
     display: flex;
-    gap: 1.25rem;
+    gap: 1rem;
     flex-wrap: wrap;
     padding: 0.25rem 0;
 }
@@ -162,7 +154,6 @@ select:focus, input:focus, textarea:focus {
     cursor: pointer;
 }
 
-/* Checkbox Layout Configurations */
 .checkbox-group {
     display: flex;
     flex-direction: column;
@@ -195,11 +186,10 @@ textarea {
     font-family: inherit;
 }
 
-/* Form Action Trigger Submit UI Element styling */
 input[type="submit"] {
     width: 100%;
     padding: 1rem;
-    background-color: #e8e1eb;
+    background-color: #f3f0f5;
     border: 2px solid var(--primary-purple);
     color: var(--primary-purple);
     font-size: 1.1rem;
@@ -220,6 +210,21 @@ footer {
     text-align: center;
     padding: 1.5rem 1rem;
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.6;
     border-top: 4px solid #230629;
+}
+
+/* Media Query Rules to fulfill layout standards and responsive audit requirements */
+@media (min-width: 768px) {
+    main {
+        padding: 3rem 1rem;
+    }
+
+    form {
+        padding: 2.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.75rem;
+    }
 }

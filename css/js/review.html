@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Confirmation - Timothy Ebil</title>
     <meta name="description" content="Review submission confirmation screen tracking total form review submissions via local memory components for Timothy Ebil.">
-    <!-- Link to the clean external decoupled stylesheet asset -->
+    <meta name="author" content="Timothy Ebil">
+    <!-- Link to the color-standardized external layout stylesheet -->
     <link rel="stylesheet" href="css/form-styles.css">
 </head>
 <body>
@@ -26,25 +27,25 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> 🌴 Timothy Ebil 🌴 Uganda</p>
+        <p>&copy; <span id="year"></span> 🌴 Timothy Ebil 🌴 Uganda<br>
+        Last Modification: <span id="lastModified"></span></p>
     </footer>
 
     <script>
-        // Rubric Criteria 6: Track submissions correctly in localStorage on document layout load
         document.addEventListener("DOMContentLoaded", () => {
+            // Track submissions correctly in localStorage memory keys
             let reviewCount = localStorage.getItem('reviewCount');
-            
             if (!reviewCount) {
                 reviewCount = 0;
             }
-            
-            // Safe decimal mathematical incremental computation step
             reviewCount = parseInt(reviewCount, 10) + 1;
             localStorage.setItem('reviewCount', reviewCount);
             
-            // Direct injection targeting the counter UI badge container wrapper
             document.getElementById('counter').textContent = reviewCount;
-            document.getElementById('year').textContent = new Date().getFullYear();
+
+            const now = new Date();
+            document.getElementById('year').textContent = now.getFullYear();
+            document.getElementById('lastModified').textContent = document.lastModified;
         });
     </script>
 </body>

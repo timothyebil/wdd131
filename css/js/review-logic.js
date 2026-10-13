@@ -1,4 +1,4 @@
-// Rubric Criteria 5: Dynamic populating via standard structured array references
+// Array source definitions for target selection blocks
 const products = [
     { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
     { id: "fc-2050", name: "power laces", averagerating: 4.7 },
@@ -10,20 +10,22 @@ const products = [
 document.addEventListener("DOMContentLoaded", () => {
     const selectElement = document.getElementById('product-name');
     
-    // Check if dropdown exists on the document view block prior to executing populating routine
+    // Safety block to ensure element selection behaves correctly
     if (selectElement) {
         products.forEach(product => {
             const option = document.createElement('option');
-            option.value = product.id; // Assign product identification code directly to value key
-            option.textContent = product.name; // Render string name inside selection target UI view
+            option.value = product.id; 
+            option.textContent = product.name; 
             selectElement.appendChild(option);
         });
     }
 
-    // Capture dynamic automatic page modification variable signatures for footer data tracking
+    // Capture dynamic metric targets for footer year and modification tracking
     const yearSpan = document.getElementById('year');
-    const modifiedSpan = document.getElementById('lastModified');
+    const lastModifiedSpan = document.getElementById('lastModified');
 
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-    if (modifiedSpan) modifiedSpan.textContent = document.lastModified;
+    const now = new Date();
+
+    if (yearSpan) yearSpan.textContent = now.getFullYear();
+    if (lastModifiedSpan) lastModifiedSpan.textContent = document.lastModified;
 });
