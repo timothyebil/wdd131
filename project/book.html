@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Adventure | Explore Uganda</title>
+    <meta name="description" content="Register your upcoming eco-tourism itinerary or mountaineering trip using our secure registration portal.">
+    <meta name="author" content="Timothy Ebil">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            
+                <svg xmlns="http://w3.org" viewBox="0 0 100 100" width="45" height="45" aria-hidden="true" class="logo-svg">
+                    <circle cx="50" cy="50" r="46" class="svg-bg"/>
+                    <circle cx="70" cy="35" r="12" class="svg-sun"/>
+                    <polygon points="20,75 45,35 65,65 80,50 90,75" class="svg-mountain"/>
+                    <path d="M15,82 Q35,70 50,82 T85,82" class="svg-river"/>
+                </svg>
+                <h1>Explore Uganda</h1>
+            </div>
+            <button id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">☰</button>
+            <nav id="primary-nav">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="discover.html" class="nav-item">Discover</a>
+                <a href="book.html" class="nav-item active">Book Adventure</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-container-card">
+            <h2>Ecotourism Registration Registry</h2>
+            <p>Complete the parameters below to clear your travel reservation profile metrics.</p>
+            
+            <form method="GET" action="thanks.html" class="booking-form-element">
+                <fieldset>
+                    <legend>Primary Explorer Attributes</legend>
+                    <label for="explorer-name">Full Name:</label>
+                    <input type="text" id="explorer-name" name="explorer-name" required placeholder="Timothy Ebil">
+                    
+                    <label for="explorer-email">Email Address:</label>
+                    <input type="email" id="explorer-email" name="explorer-email" required placeholder="name@domain.com">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Expedition Preferences</legend>
+                    <label for="form-terrain-select">Target Habitation Terrain:</label>
+                    <select name="selected-terrain" id="form-terrain-select" required>
+                        <option value="" disabled selected>Choose a habitat structure...</option>
+                        <option value="river">Jinja White-Water Rafting (River)</option>
+                        <option value="savanna">Murchison Wildlife Safari (Savanna)</option>
+                        <option value="forest">Bwindi Primate Trekking (Forest)</option>
+                        <option value="mountain">Rwenzori Slopes Climbing (Mountain)</option>
+                    </select>
+                    
+                    <label for="departure-date">Planned Departure Date:</label>
+                    <input type="date" id="departure-date" name="departure-date" required>
+                    
+                    <label for="explorer-notes">Special Porter Accommodations or Notes:</label>
+                    <textarea id="explorer-notes" name="explorer-notes" rows="4" placeholder="List medical gear, physical accessibility needs, or dietary requests..."></textarea>
+                </fieldset>
+
+                <button type="submit" class="form-submit-btn">Secure Itinerary Registration</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year-span">2026</span> Explore Uganda Platform | Developed by Timothy Ebil | Oyam District</p>
+        <p>
+            <a href="siteplan.html">Project Site Plan</a> | 
+            <a href="references.html">Sources &amp; Citations</a>
+        </p>
+    </footer>
+</body>
+</html>
